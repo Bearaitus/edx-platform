@@ -46,10 +46,13 @@
 
     // welcome content
     .wrapper-content-header {
-      @include linear-gradient($blue-l1, $blue, $blue-d1);
-
-      padding-bottom: ($baseline*4);
-      padding-top: ($baseline*4);
+      background-image: url('../../images/mentor.png');
+      background-size: cover;         // Масштабирует изображение, чтобы оно заполнило весь элемент
+      background-position: center;    // Центрирует изображение
+      background-repeat: no-repeat;   // Отключает повторение
+      padding-bottom: ($baseline * 4);
+      padding-top: ($baseline * 4);
+      height: 100vh;                 // Высота на весь экран
     }
 
     .content-header {
