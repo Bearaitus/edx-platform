@@ -46,7 +46,7 @@
 
     // welcome content
     .wrapper-content-header {
-      background-image: url('/static/mentor.png');
+      background-image: url('#{$static-path}/images/mentor.png');
       background-size: cover;         // Масштабирует изображение, чтобы оно заполнило весь элемент
       background-position: center;    // Центрирует изображение
       background-repeat: no-repeat;   // Отключает повторение
