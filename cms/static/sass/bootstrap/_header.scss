@@ -328,8 +328,19 @@
       }
 
       .action-signin {
-        padding: ($baseline/4) ($baseline/2);
-        text-transform: uppercase;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        padding: 9px 17px;
+        background-color: #f00;
+        color: #fff;
+        border: 1px solid #f00;
+        
+      }
+      .action-signin:hover {
+        background-color: #fff;
+        color: #f00;
       }
     }
   }
