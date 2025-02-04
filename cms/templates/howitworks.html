@@ -20,15 +20,6 @@
       <h1><span class="wrapper-text-welcome">${_("Welcome to {studio_name}").format(
           studio_name=settings.STUDIO_NAME
       )}</span></h1>
-      <p class="tagline">${_("{studio_name} helps manage your online courses, so you can focus on teaching them").format(
-        studio_name=settings.STUDIO_SHORT_NAME
-      )}</p>
-      <a class="brand-link" href="/">
-        <img class="brand-image" src="${static.url('images/openedx-logo.png')}" alt="${settings.STUDIO_NAME}" />
-          % if settings.LOGO_IMAGE_EXTRA_TEXT == 'edge':
-          <span class="font-italic"> <span class="tilted">|</span> EDGE</span>
-          % endif
-      </a>
     </header>
   </section>
 </div>
