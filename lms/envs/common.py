@@ -1950,7 +1950,7 @@ CELERY_TIMEZONE = 'UTC'
 TIME_ZONE = 'UTC'
 LANGUAGE_CODE = 'en'  # http://www.i18nguy.com/unicode/language-identifiers.html
 # these languages display right to left
-LANGUAGES_BIDI = ("en")
+LANGUAGES_BIDI = ("fr")
 
 LANGUAGE_COOKIE_NAME = "openedx-language-preference"
 
