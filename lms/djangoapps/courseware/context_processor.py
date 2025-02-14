@@ -41,7 +41,7 @@ def user_timezone_locale_prefs(request):
     if not cached_value:
         user_prefs = {
             'user_timezone': None,
-            'user_language': 'en',
+            'user_language': get_language(),
         }
         if hasattr(request, 'user') and request.user.is_authenticated:
             try:
@@ -53,7 +53,9 @@ def user_timezone_locale_prefs(request):
                     key: user_preferences.get(pref_name, None)
                     for key, pref_name in RETRIEVABLE_PREFERENCES.items()
                 }
-        user_prefs['user_language'] = 'en'
+        site_wide_language = get_value('LANGUAGE_CODE', None)
+        if site_wide_language:
+            user_prefs['user_language'] = site_wide_language
 
         cached_value.update(user_prefs)
     return cached_value
