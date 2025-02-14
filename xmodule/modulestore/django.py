@@ -388,7 +388,7 @@ class XBlockI18nService:
         self.translator = django.utils.translation
         if block:
             xblock_locale_domain, xblock_locale_dir = self.get_python_locale(block)
-            selected_language = get_language()
+            selected_language = 'en'
 
             if xblock_locale_dir:
                 try:
