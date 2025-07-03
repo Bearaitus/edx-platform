@@ -32,14 +32,6 @@ from openedx.core.djangolib.markup import HTML, Text
           <button type="button" class="hint-button problem-action-btn btn-link btn-small" data-value="${_('Подсказка')}" ${'' if should_enable_next_hint else 'disabled'}>${_('Подсказка')}</button>
       </span>
       % endif
-      % if save_button:
-      <span class="problem-action-button-wrapper">
-          <button type="button" class="save problem-action-btn btn-link btn-small" data-value="${_('Сохранить')}">
-              <span aria-hidden="true">${_('Сохранить')}</span>
-              <span class="sr">${_("Сохраните свой ответ")}</span>
-          </button>
-      </span>
-      % endif
       % if attempts_used and reset_button:
       <span class="problem-action-button-wrapper">
           <button type="button" class="reset problem-action-btn btn-link btn-small" data-value="${_('Сбросить')}"><span aria-hidden="true">${_('Сбросить')}</span><span class="sr">${_("Сбросьте свой ответ")}</span></button>
