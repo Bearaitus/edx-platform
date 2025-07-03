@@ -36,7 +36,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
         <solutionset>
             <solution explanation-id="solution1">
             <div class="detailed-solution">
-                <p>Explanation</p>
+                <p>Решение</p>
                 <p>This is the 1st solution</p>
                 <p>Not much to explain here, sorry!</p>
             </div>
@@ -44,7 +44,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
             <solution explanation-id="solution2">
             <div class="detailed-solution">
-                <p>Explanation</p>
+                <p>Решение</p>
                 <p>This is the 2nd solution</p>
             </div>
             </solution>
@@ -96,7 +96,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -104,7 +104,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -142,7 +142,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -150,7 +150,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -186,7 +186,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -194,7 +194,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -260,7 +260,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -268,7 +268,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -304,7 +304,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -312,7 +312,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -333,7 +333,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -341,7 +341,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -388,7 +388,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -396,7 +396,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -417,7 +417,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -425,7 +425,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -563,7 +563,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
             <solution>
             <div class="detailed-solution">
-                <p>Explanation</p>
+                <p>Решение</p>
                 <p>This is the solution</p>
                 <p>Not much to explain here, sorry!</p>
             </div>
@@ -584,7 +584,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="solution1">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 1st solution</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -592,7 +592,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
                 <solution explanation-id="solution2">
                 <div class="detailed-solution">
-                    <p>Explanation</p>
+                    <p>Решение</p>
                     <p>This is the 2nd solution</p>
                 </div>
                 </solution>
@@ -637,7 +637,7 @@ class CapaAnswerPoolTest(unittest.TestCase):
 
             <solution>
             <div class="detailed-solution">
-                <p>Explanation</p>
+                <p>Решение</p>
                 <p>This is the solution</p>
                 <p>Not much to explain here, sorry!</p>
             </div>

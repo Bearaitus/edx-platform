@@ -162,13 +162,13 @@ If first and last symbols are not brackets, or they are not closed, stringrespon
 Just input 100 test. Stringresponse will appear:
 = 100 test
 
-[Explanation]
+[Решение]
 Pi, or the the ratio between a circle's circumference to its diameter, is an irrational number known to extreme precision. It is value is approximately equal to 3.14.
 
 Although you can get an exact value by typing 502*9 into a calculator, the result will be close to 500*10, or 5,000. The grader accepts any response within 15% of the true value, 4518, so that you can use any estimation technique that you like.
 
 If you look at your hand, you can count that you have five fingers.
-[Explanation]\
+[Решение]\
 `);
       expect(data).toXMLEqual(`<problem>
   <p>A numerical response problem accepts a line of text input from the student, and evaluates the input for correctness based on its numerical value.</p>
@@ -212,7 +212,7 @@ If you look at your hand, you can count that you have five fingers.
   </stringresponse>
   <solution>
     <div class="detailed-solution">
-      <p>Explanation</p>
+      <p>Решение</p>
       <p>Pi, or the the ratio between a circle's circumference to its diameter, is an irrational number known to extreme precision. It is value is approximately equal to 3.14.</p>
       <p>Although you can get an exact value by typing 502*9 into a calculator, the result will be close to 500*10, or 5,000. The grader accepts any response within 15% of the true value, 4518, so that you can use any estimation technique that you like.</p>
       <p>If you look at your hand, you can count that you have five fingers.</p>
@@ -326,9 +326,9 @@ One of the main elements that goes into a good multiple choice question is the e
 ( ) Android
 ( ) The Beatles
 
-[Explanation]
+[Решение]
 The release of the iPod allowed consumers to carry their entire music library with them in a format that did not rely on fragile and energy-intensive spinning disks.
-[Explanation]\
+[Решение]\
 `);
       expect(data).toXMLEqual(`<problem>
     <multiplechoiceresponse>
@@ -345,7 +345,7 @@ The release of the iPod allowed consumers to carry their entire music library wi
         </choicegroup>
         <solution>
             <div class="detailed-solution">
-                <p>Explanation</p>
+                <p>Решение</p>
                 <p>The release of the iPod allowed consumers to carry their entire music library with them in a format that did not rely on fragile and energy-intensive spinning disks.</p>
             </div>
         </solution>
@@ -365,9 +365,9 @@ What Apple device competed with the portable CD player?
 ( ) Android
 (@) The Beatles
 
-[Explanation]
+[Решение]
 The release of the iPod allowed consumers to carry their entire music library with them in a format that did not rely on fragile and energy-intensive spinning disks.
-[Explanation]\
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -385,7 +385,7 @@ The release of the iPod allowed consumers to carry their entire music library wi
         </choicegroup>
         <solution>
             <div class="detailed-solution">
-                <p>Explanation</p>
+                <p>Решение</p>
                 <p>The release of the iPod allowed consumers to carry their entire music library with them in a format that did not rely on fragile and energy-intensive spinning disks.</p>
             </div>
         </solution>
@@ -406,9 +406,9 @@ testa
 (!) i
 ( ) ii
 (x) iii
-[Explanation]
+[Решение]
 When the student is ready, the explanation appears.
-[Explanation]\
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -438,7 +438,7 @@ When the student is ready, the explanation appears.
   </multiplechoiceresponse>
   <solution>
     <div class="detailed-solution">
-      <p>Explanation</p>
+      <p>Решение</p>
       <p>When the student is ready, the explanation appears.</p>
     </div>
   </solution>
@@ -453,9 +453,9 @@ The answer options and the identification of the correct answer is defined in th
 Translation between Option Response and __________ is extremely straightforward:
 [[(Multiple Choice), String Response, Numerical Response, External Response, Image Response]]
 
-[Explanation]
+[Решение]
 Multiple Choice also allows students to select from a variety of pre-written responses, although the format makes it easier for students to read very long response options. Optionresponse also differs slightly because students are more likely to think of an answer and then search for it rather than relying purely on recognition to answer the question.
-[Explanation]\
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -466,7 +466,7 @@ Multiple Choice also allows students to select from a variety of pre-written res
         <optioninput options="('Multiple Choice','String Response','Numerical Response','External Response','Image Response')" correct="Multiple Choice"/>
         <solution>
             <div class="detailed-solution">
-                <p>Explanation</p>
+                <p>Решение</p>
                 <p>Multiple Choice also allows students to select from a variety of pre-written responses, although the format makes it easier for students to read very long response options. Optionresponse also differs slightly because students are more likely to think of an answer and then search for it rather than relying purely on recognition to answer the question.</p>
             </div>
         </solution>
@@ -481,9 +481,9 @@ The answer is correct if it matches every character of the expected answer. This
 Which US state has Lansing as its capital?
 = Michigan
 
-[Explanation]
+[Решение]
 Lansing is the capital of Michigan, although it is not Michgan's largest city, or even the seat of the county in which it resides.
-[Explanation]\
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -494,7 +494,7 @@ Lansing is the capital of Michigan, although it is not Michgan's largest city, o
         <textline size="20"/>
         <solution>
             <div class="detailed-solution">
-            <p>Explanation</p>
+            <p>Решение</p>
             <p>Lansing is the capital of Michigan, although it is not Michgan's largest city, or even the seat of the county in which it resides.</p>
             </div>
         </solution>
@@ -505,9 +505,9 @@ Lansing is the capital of Michigan, although it is not Michgan's largest city, o
       const data = MarkdownEditingDescriptor.markdownToXml(`Who lead the civil right movement in the United States of America?
 = | \w*\.?\s*Luther King\s*.*
 
-[Explanation]
-Test Explanation.
-[Explanation]\
+[Решение]
+Test Решение.
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -516,8 +516,8 @@ Test Explanation.
         <textline size="20"/>
         <solution>
             <div class="detailed-solution">
-            <p>Explanation</p>
-            <p>Test Explanation.</p>
+            <p>Решение</p>
+            <p>Test Решение.</p>
             </div>
         </solution>
     </stringresponse>
@@ -530,9 +530,9 @@ or= Doctor Martin Luther King Junior
 or= Martin Luther King
 or= Martin Luther King Junior
 
-[Explanation]
-Test Explanation.
-[Explanation]\
+[Решение]
+Test Решение.
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -544,8 +544,8 @@ Test Explanation.
         <textline size="20"/>
         <solution>
             <div class="detailed-solution">
-            <p>Explanation</p>
-            <p>Test Explanation.</p>
+            <p>Решение</p>
+            <p>Test Решение.</p>
             </div>
         </solution>
     </stringresponse>
@@ -558,9 +558,9 @@ or= two
 or= ^thre+
 or= ^4|Four$
 
-[Explanation]
-Test Explanation.
-[Explanation]\
+[Решение]
+Test Решение.
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -572,8 +572,8 @@ Test Explanation.
         <textline size="20"/>
         <solution>
             <div class="detailed-solution">
-            <p>Explanation</p>
-            <p>Test Explanation.</p>
+            <p>Решение</p>
+            <p>Test Решение.</p>
             </div>
         </solution>
     </stringresponse>
@@ -584,9 +584,9 @@ Test Explanation.
       const data = MarkdownEditingDescriptor.markdownToXml(`>>Who lead the civil right movement in the United States of America?<<
 = | \w*\.?\s*Luther King\s*.*
 
-[Explanation]
-Test Explanation.
-[Explanation]\
+[Решение]
+Test Решение.
+[Решение]\
 `);
       expect(data).toXMLEqual(`\
 <problem>
@@ -595,8 +595,8 @@ Test Explanation.
         <textline size="20"/>
         <solution>
             <div class="detailed-solution">
-            <p>Explanation</p>
-            <p>Test Explanation.</p>
+            <p>Решение</p>
+            <p>Test Решение.</p>
             </div>
         </solution>
     </stringresponse>
@@ -721,7 +721,7 @@ Option with embedded parens
 What happens w/ empty correct options?
 [[()]]
 
-[Explanation]see[/expLanation]
+[Решение]see[/expLanation]
 
 [explanation]
 orphaned start
@@ -781,7 +781,7 @@ Code should be nicely monospaced.
   </optionresponse>
   <solution>
     <div class="detailed-solution">
-      <p>Explanation</p>
+      <p>Решение</p>
       <p>see</p>
     </div>
   </solution>
@@ -855,7 +855,7 @@ Urdu, Marathi, and French are all Indo-European languages, while Finnish and Hun
         </choicegroup>
         <solution>
             <div class="detailed-solution">
-            <p>Explanation</p>
+            <p>Решение</p>
             <p>According to September 2014 estimates:</p>
             <p>The population of Indonesia is approximately 250 million.</p>
             <p>The population of Brazil  is approximately 200 million.</p>
@@ -878,7 +878,7 @@ Urdu, Marathi, and French are all Indo-European languages, while Finnish and Hun
         <p>Note: Make sure you select all of the correct options—there may be more than one!</p>
         <solution>
           <div class="detailed-solution">
-          <p>Explanation</p>
+          <p>Решение</p>
           <p>Urdu, Marathi, and French are all Indo-European languages, while Finnish and Hungarian are in the Uralic family.</p>
           </div>
         </solution>
@@ -922,7 +922,7 @@ The population of Germany is approximately 81 million.
         </choicegroup>
         <solution>
             <div class="detailed-solution">
-            <p>Explanation</p>
+            <p>Решение</p>
             <p>According to September 2014 estimates:</p>
             <p>The population of Indonesia is approximately 250 million.</p>
             <p>The population of Brazil  is approximately 200 million.</p>

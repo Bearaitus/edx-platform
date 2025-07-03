@@ -47,7 +47,7 @@ class EnrollmentTest(UrlResetMixin, ModuleStoreTestCase, OpenEdxEventsTestMixin)
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()

@@ -19,7 +19,7 @@ def test_contains_stan(expect, ans):
   </customresponse>
   <solution>
     <div class="detailed-solution">
-      <p>Explanation</p>
+      <p>Решение</p>
       <p>Stanford</p>
     </div>
   </solution>

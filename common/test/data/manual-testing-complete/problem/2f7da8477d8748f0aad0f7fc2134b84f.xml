@@ -28,5 +28,5 @@ else:
   correct = ['incorrect']
 </answer></schematicresponse>
 
-    <solution><div class="detailed-solution"><p>Explanation</p><p>A voltage divider that evenly divides the input voltage can be formed with two identically valued resistors, with the sampled voltage taken in between the two.</p><p><img src="/static/images/voltage_divider.png"/></p><p>A simple high-pass filter without any further constaints can be formed by simply putting a resister in series with a capacitor. The actual values of the components do not really matter in order to meet the constraints of the problem.</p><p><img src="/static/images/high_pass_filter.png"/></p></div></solution>
+    <solution><div class="detailed-solution"><p>Решение</p><p>A voltage divider that evenly divides the input voltage can be formed with two identically valued resistors, with the sampled voltage taken in between the two.</p><p><img src="/static/images/voltage_divider.png"/></p><p>A simple high-pass filter without any further constaints can be formed by simply putting a resister in series with a capacitor. The actual values of the components do not really matter in order to meet the constraints of the problem.</p><p><img src="/static/images/high_pass_filter.png"/></p></div></solution>
 </problem>

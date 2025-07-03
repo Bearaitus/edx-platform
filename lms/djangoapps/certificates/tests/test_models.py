@@ -72,7 +72,7 @@ class ExampleCertificateTest(TestCase, OpenEdxEventsTestMixin):
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()
@@ -137,7 +137,7 @@ class CertificateHtmlViewConfigurationTest(TestCase, OpenEdxEventsTestMixin):
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()
@@ -245,7 +245,7 @@ class EligibleCertificateManagerTest(SharedModuleStoreTestCase, OpenEdxEventsTes
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()
@@ -302,7 +302,7 @@ class TestCertificateGenerationHistory(TestCase, OpenEdxEventsTestMixin):
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()
@@ -374,7 +374,7 @@ class CertificateInvalidationTest(SharedModuleStoreTestCase, OpenEdxEventsTestMi
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()
@@ -444,7 +444,7 @@ class GeneratedCertificateTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()
@@ -701,7 +701,7 @@ class CertificateAllowlistTest(SharedModuleStoreTestCase, OpenEdxEventsTestMixin
         """
         Set up class method for the Test class.
 
-        This method starts manually events isolation. Explanation here:
+        This method starts manually events isolation. Решение here:
         openedx/core/djangoapps/user_authn/views/tests/test_events.py#L44
         """
         super().setUpClass()
