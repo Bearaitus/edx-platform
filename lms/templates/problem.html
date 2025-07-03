@@ -9,7 +9,6 @@ from openedx.core.djangolib.markup import HTML, Text
   ${ problem['name'] }
 </h3>
 
-<div class="problem-progress" id="${ id }-problem-progress"></div>
 
 <div class="problem">
   ${ HTML(problem['html']) }
@@ -39,7 +38,7 @@ from openedx.core.djangolib.markup import HTML, Text
       % endif
       % if answer_available:
       <span class="problem-action-button-wrapper">
-          <button type="button" class="show problem-action-btn btn-link btn-small" aria-describedby="${ short_id }-problem-title"><span class="show-label">${_('Показать ответ')}</span></button>
+          <button type="button" class="show problem-action-btn btn-link btn-small" aria-describedby="${ short_id }-problem-title"><b><span class="show-label">${_('Посмотреть решение')}</span></b></button>
       </span>
       % endif
     </div>
