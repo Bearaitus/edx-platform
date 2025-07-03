@@ -711,7 +711,7 @@
                 // replace explanations
                 xml = xml.replace(/\[explanation\]\n?([^\]]*)\[\/?explanation\]/gmi, function(match, p1) {
                     // xss-lint: disable=javascript-concat-html
-                    return '<solution>\n<div class="detailed-solution">\n' + gettext('Explanation') + '\n\n' + p1 + '\n</div>\n</solution>';
+                    return '<solution>\n<div class="detailed-solution">\n' + gettext('Решение') + '\n\n' + p1 + '\n</div>\n</solution>';
                 });
 
                 // replace code blocks
