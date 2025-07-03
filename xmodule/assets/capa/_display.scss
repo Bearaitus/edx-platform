@@ -458,6 +458,7 @@ div.problem {
       display: inline-block;
       margin-top: ($baseline / 2);
       margin-bottom: 0;
+      padding-top: 15px;
 
       &::before {
         @extend %t-strong;
@@ -969,7 +970,7 @@ div.problem .action {
   flex-wrap: wrap;
 
   .problem-action-buttons-wrapper {
-      display: inline-flex;
+      // display: inline-flex;
       justify-content: flex-end;
       width: 100%;
       padding-bottom: $baseline;
