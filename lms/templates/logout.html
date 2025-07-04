@@ -2,35 +2,28 @@
 {% load i18n static %}
 {% load django_markup %}
 
-{% block title %}Выход выполнен | {{ block.super }}{% endblock %}
+{% block title %}Вы вышли из системы | {{ block.super }}{% endblock %}
 
 {% block body %}
     {% if show_tpa_logout_link %}
         <h1>Вы вышли из системы.</h1>
 
         <p style="text-align: center; margin-bottom: 20px;">
-            {start_anchor}{{ tpa_logout_url }}{middle_anchor}Нажмите здесь{end_anchor}, чтобы удалить сессию единого входа (SSO).
-            {% interpolate_html sso_signout_msg start_anchor='<a href="' middle_anchor='">'|safe end_anchor='</a>'|safe %}
+            <a href="{{ tpa_logout_url }}">Нажмите здесь</a>, чтобы завершить сеанс единого входа (SSO).
         </p>
 
     {% else %}
         {% if enterprise_target %}
-            {% comment %}
-                Для потока единого входа в систему предприятия мы намеренно удаляем сессию пользователя.
-                Мы показываем это сообщение о входе вместо сообщения о выходе,
-                чтобы избежать путаницы для пользователя в этом случае.
-            {% endcomment %}
-            <h1>Вы входите в систему.</h1>
+            <h1>Выполняется вход в систему.</h1>
 
             <p style="text-align: center; margin-bottom: 20px;">
-                Это может занять минуту. Если вы не будете перенаправлены, перейдите на главную страницу.
+                Это может занять некоторое время. Если вас не перенаправили, перейдите на главную страницу.
             </p>
         {% else %}
-            <h1>Вы вышли из системы</h1>
+            <h1>Вы вышли из системы.</h1>
 
             <p style="text-align: center; margin-bottom: 20px;">
-                Если вы не будете перенаправлены в течение 5 секунд, {start_anchor}{{ target }}{middle_anchor}нажмите здесь, чтобы перейти на главную страницу{end_anchor}.
-                {% interpolate_html signout_msg1 start_anchor='<a href="'|safe middle_anchor='">'|safe end_anchor='</a>'|safe %}
+                Если вы не были перенаправлены в течение 5 секунд, <a href="{{ target }}">нажмите здесь, чтобы перейти на главную страницу</a>.
             </p>
         {% endif %}
 
