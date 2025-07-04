@@ -1308,7 +1308,7 @@ TPA_PROVIDER_SUSTAINED_THROTTLE = '50/hr'
 #   from the different IDAs. To ensure the user is logged out of all the IDAs be sure to redirect
 #   back to <LMS>/logout after logging out of the TPA.
 # .. toggle_creation_date: 2023-05-07
-TPA_AUTOMATIC_LOGOUT_ENABLED = True
+TPA_AUTOMATIC_LOGOUT_ENABLED = False
 
 ################################## TEMPLATE CONFIGURATION #####################################
 # Mako templating
