@@ -32,8 +32,26 @@ $fg-min-width: 900px;
 
 // +Fonts
 // ====================
-$f-sans-serif: 'Open Sans','Helvetica Neue', Helvetica, Arial, sans-serif;
-$f-monospace: 'Bitstream Vera Sans Mono', Consolas, Courier, monospace;
+@function font-url($font-name) {
+  @return url('#{$static-path}/fonts/#{$font-name}.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TT Positive';
+  src: font-url('TT Positive Regular');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Positive';
+  src: font-url('TT Positive Bold');
+  font-weight: bold;
+  font-style: normal;
+}
+
+$f-sans-serif: 'TT Positive', sans-serif;
+$f-monospace: 'TT Positive', Consolas, Courier, monospace;
 
 // +Colors - Utility
 // ====================
