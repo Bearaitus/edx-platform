@@ -1028,7 +1028,7 @@ class ProblemBlock(
         received by the server.
         """
         _ = self.runtime.service(self, "i18n").gettext
-        return _('Submitting')
+        return _('Отправка')
 
     def should_enable_submit_button(self):
         """
