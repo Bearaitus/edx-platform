@@ -136,18 +136,18 @@ $blue-t2: rgba($blue, 0.5) !default;
 $blue-t3: rgba($blue, 0.75) !default;
 
 $pink: rgb(183, 37, 103) !default; // #b72567;
-$pink-l1: tint($pink, 20%) !default;
-$pink-l2: tint($pink, 40%) !default;
-$pink-l3: tint($pink, 60%) !default;
-$pink-l4: tint($pink, 80%) !default;
-$pink-l5: tint($pink, 90%) !default;
-$pink-d1: shade($pink, 20%) !default;
-$pink-d2: shade($pink, 40%) !default;
-$pink-d3: shade($pink, 60%) !default;
-$pink-d4: shade($pink, 80%) !default;
-$pink-s1: saturate($pink, 15%) !default;
-$pink-s2: saturate($pink, 30%) !default;
-$pink-s3: saturate($pink, 45%) !default;
+$pink-l1: tint($pink, 20%) !default; // #F1D3E1
+$pink-l2: tint($pink, 40%) !default; // #E2A8C2
+$pink-l3: tint($pink, 60%) !default; // #D47CA4
+$pink-l4: tint($pink, 80%) !default; // #C55185
+$pink-l5: tint($pink, 90%) !default; // #BE3B76
+$pink-d1: shade($pink, 20%) !default; // #921d52
+$pink-d2: shade($pink, 40%) !default; // #6d163d
+$pink-d3: shade($pink, 60%) !default; // #490e29
+$pink-d4: shade($pink, 80%) !default; // #240714
+$pink-s1: saturate($pink, 15%) !default; // #7f5d6c
+$pink-s2: saturate($pink, 30%) !default; // #904c6b
+$pink-s3: saturate($pink, 45%) !default; // #a03c69
 $pink-u1: desaturate($pink, 15%) !default;
 $pink-u2: desaturate($pink, 30%) !default;
 $pink-u3: desaturate($pink, 45%) !default;
