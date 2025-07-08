@@ -43,9 +43,10 @@ from openedx.core.djangolib.markup import HTML, Text
       % endif
     </div>
     <div class="submit-attempt-container">
-      <button type="button" class="submit btn-brand" data-submitting="${ submit_button_submitting }" data-value="${ submit_button }" data-should-enable-submit-button="${ should_enable_submit_button }" aria-describedby="submission_feedback_${short_id}" ${'' if should_enable_submit_button else 'disabled'}>
-          <span class="submit-label">Ответить</span>
-      </button>
+    <button type="button" class="submit btn-brand" data-submitting="${ submit_button_submitting }" data-value="${ submit_button }" data-should-enable-submit-button="${ should_enable_submit_button }" aria-describedby="submission_feedback_${short_id}" ${'' if should_enable_submit_button else 'disabled'} style="background-color: initial; color: initial; transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;" onmouseover="this.style.background='#FF0000'; this.querySelector('.submit-label').style.color='white'" onmouseout="this.style.background='initial'; this.querySelector('.submit-label').style.color='initial'">
+      <span class="submit-label">Ответить</span>
+    </button>
+
 
       % if submit_disabled_cta:
         % if submit_disabled_cta.get('event_data'):
