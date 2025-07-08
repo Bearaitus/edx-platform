@@ -1384,8 +1384,8 @@ class ProblemBlock(
             if answer_notification_type == 'incorrect':
                 if progress is not None:
                     answer_notification_message = ngettext(
-                        "Неправильно ({progress})",
-                        "Неправильно ({progress})",
+                        "{progress}",
+                        "{progress}",
                         progress.frac()[1]
                     ).format(progress=str(progress))
                 else:
