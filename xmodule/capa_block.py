@@ -1384,8 +1384,8 @@ class ProblemBlock(
             if answer_notification_type == 'incorrect':
                 if progress is not None:
                     answer_notification_message = ngettext(
-                        "Неправильно ({progress} б.)",
-                        "Неправильно ({progress} б.)",
+                        "Неправильно ({progress})",
+                        "Неправильно ({progress})",
                         progress.frac()[1]
                     ).format(progress=str(progress))
                 else:
@@ -1393,8 +1393,8 @@ class ProblemBlock(
             elif answer_notification_type == 'correct':
                 if progress is not None:
                     answer_notification_message = ngettext(
-                        "Правильно ({progress} б.)",
-                        "Правильно ({progress} б.)",
+                        "Правильно ({progress})",
+                        "Правильно ({progress})",
                         progress.frac()[1]
                     ).format(progress=str(progress))
                 else:
@@ -1402,8 +1402,8 @@ class ProblemBlock(
             elif answer_notification_type == 'partially-correct':
                 if progress is not None:
                     answer_notification_message = ngettext(
-                        "Почти правильно ({progress} б.)",
-                        "Почти правильно ({progress} б.)",
+                        "Почти правильно ({progress})",
+                        "Почти правильно ({progress})",
                         progress.frac()[1]
                     ).format(progress=str(progress))
                 else:
