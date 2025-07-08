@@ -57,6 +57,7 @@
       padding-bottom: ($baseline * 4);
       padding-top: ($baseline * 4);
       height: 100vh;                 // Высота на весь экран
+      overflow: hidden;
     }
 
     .content-header {
