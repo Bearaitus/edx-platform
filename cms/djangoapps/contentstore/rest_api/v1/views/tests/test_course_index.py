@@ -55,7 +55,7 @@ class CourseIndexViewTest(CourseTestCase, PermissionAccessMixin):
         """Check successful response content"""
         response = self.client.get(self.url)
         expected_response = {
-            "course_release_date": "Set Date",
+            "course_release_date": "Перейти",
             "course_structure": _course_outline_json(self.request, self.course),
             "deprecated_blocks_info": {
                 "deprecated_enabled_block_types": [],
@@ -96,7 +96,7 @@ class CourseIndexViewTest(CourseTestCase, PermissionAccessMixin):
         """Check successful response content with show query param"""
         response = self.client.get(self.url, {"show": str(self.unit.location)})
         expected_response = {
-            "course_release_date": "Set Date",
+            "course_release_date": "Перейти",
             "course_structure": _course_outline_json(self.request, self.course),
             "deprecated_blocks_info": {
                 "deprecated_enabled_block_types": [],
