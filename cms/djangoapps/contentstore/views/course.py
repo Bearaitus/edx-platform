@@ -940,16 +940,13 @@ def _create_or_rerun_course(request):
     except DuplicateCourseError:
         return JsonResponse({
             'ErrMsg': _(
-                'There is already a course defined with the same '
-                'organization and course number. Please '
-                'change either organization or course number to be unique.'
+                'Уже существует курс с таким же учебным заведением и номером курса. Пожалуйста, '
+                'измените либо учебное заведение, либо номер курса, чтобы он был уникальным.'
             ),
             'OrgErrMsg': _(
-                'Please change either the organization or '
-                'course number so that it is unique.'),
+                'Пожалуйста, измените либо учебное заведение, либо номер курса, чтобы он был уникальным.'),
             'CourseErrMsg': _(
-                'Please change either the organization or '
-                'course number so that it is unique.'),
+                'Пожалуйста, измените либо учебное заведение, либо номер курса, чтобы он был уникальным.'),
         })
     except InvalidKeyError as error:
         return JsonResponse({
