@@ -358,13 +358,13 @@ define([
             this.model.showCertificateAvailableDate = true;
             $('#certificates-display-behavior').val('end_with_date').trigger('change');
             $('#certificate-available-date').val('01/01/2020').trigger('change');
-            $('#course-end-date').val('01/01/2030').trigger('change');
+            $('#course-end-date').val('01/01/2025').trigger('change');
             expect(this.view.$('.message-error')).toExist();
         });
         it('should allow save with a certificate available date before end date for self-paced course', function() {
             this.model.showCertificateAvailableDate = false;
             this.model.set('self_paced', true);
-            $('#course-end-date').val('01/01/2030').trigger('change');
+            $('#course-end-date').val('01/01/2025').trigger('change');
             expect(this.view.$('.message-error')).not.toExist();
             this.model.set('self_paced', false);
         });
