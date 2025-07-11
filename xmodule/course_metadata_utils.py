@@ -19,41 +19,27 @@ DEFAULT_START_DATE = datetime(2025, 1, 1, tzinfo=utc)
 """
 Default grading policy for a course run.
 """
-DEFAULT_GRADING_POLICY = {}
-# DEFAULT_GRADING_POLICY = {
-#     "GRADER": [
-#         {
-#             "type": "Homework",
-#             "short_label": "HW",
-#             "min_count": 12,
-#             "drop_count": 2,
-#             "weight": 0.15,
-#         },
-#         {
-#             "type": "Lab",
-#             "min_count": 12,
-#             "drop_count": 2,
-#             "weight": 0.15,
-#         },
-#         {
-#             "type": "Midterm Exam",
-#             "short_label": "Midterm",
-#             "min_count": 1,
-#             "drop_count": 0,
-#             "weight": 0.3,
-#         },
-#         {
-#             "type": "Final Exam",
-#             "short_label": "Final",
-#             "min_count": 1,
-#             "drop_count": 0,
-#             "weight": 0.4,
-#         }
-#     ],
-#     "GRADE_CUTOFFS": {
-#         "Pass": 0.5,
-#     },
-# }
+DEFAULT_GRADING_POLICY = {
+            "GRADER": [
+                {
+                    "drop_count": 0,
+                    "min_count": 1,
+                    "short_label": "Теория",
+                    "type": "Теория",
+                    "weight": 0.1
+                },
+                {
+                    "drop_count": 0,
+                    "min_count": 1,
+                    "short_label": "Практика",
+                    "type": "Практические кейсы",
+                    "weight": 0.1
+                }
+            ],
+            "GRADE_CUTOFFS": {
+                "Pass": 0.75
+            }
+        }
 
 
 def clean_course_key(course_key, padding_char):
