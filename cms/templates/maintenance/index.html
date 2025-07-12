@@ -8,13 +8,8 @@ from django.urls import reverse
 <%block name="title">${_('Maintenance Dashboard')}</%block>
 <%block name="viewcontent">
 <div class="container maintenance-content">
-    <ul class="maintenance-list">
-        % for view in views.values():
-        <li class="view-list-container">
-            <a class="view-name" href='${reverse(view["url"])}'>${view['name']}</a>
-            <span class="view-desc">${view['description']}</span>
-        </li>
-        % endfor
-    </ul>
+    <div class="alert alert-danger" role="alert">
+        Данная страница недоступна.
+    </div>
 </div>
 </%block>
