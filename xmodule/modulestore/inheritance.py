@@ -96,7 +96,7 @@ class InheritanceMixin(XBlockMixin):
             '"after_all_attempts_or_correct", "attempted_no_past_due", and "never".'
         ),
         scope=Scope.settings,
-        default="finished",
+        default="after_all_attempts_or_correct",
     )
 
     show_correctness = String(
