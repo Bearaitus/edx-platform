@@ -824,7 +824,7 @@ class CourseFields:  # lint-amnesty, pylint: disable=missing-class-docstring
         help=_(
             "If dashboard social sharing and custom course URLs are enabled, you can provide a URL "
             "(such as the URL to a course About page) that social media sites can link to. URLs must "
-            "be fully qualified. For example: http://www.edx.org/course/Introduction-to-MOOCs-ITM001"
+            "be fully qualified"
         ),
         default=None,
         scope=Scope.settings,
@@ -840,10 +840,7 @@ class CourseFields:  # lint-amnesty, pylint: disable=missing-class-docstring
         display_name=_("Teams Configuration"),
         # Translators: please don't translate "id".
         help=_(
-            'Configure team sets, limit team sizes, and set visibility settings using JSON. See '
-            '<a target="&#95;blank" href="https://edx.readthedocs.io/projects/edx-partner-course-staff/en/latest/'
-            'course_features/teams/teams_setup.html#enable-and-configure-teams">teams '
-            'configuration documentation</a> for help and examples.'
+            'Configure team sets, limit team sizes, and set visibility settings using JSON.'
         ),
         scope=Scope.settings,
     )
