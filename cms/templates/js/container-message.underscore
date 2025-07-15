@@ -1,8 +1,4 @@
 <% if (currentlyVisibleToStudents) { %>
-    <div class="message has-warnings">
-        <p class="warning">
-            <span class="icon fa fa-warning" aria-hidden="true"></span>
-            <%- gettext("Внимание: Последняя опубликованная версия этой страницы доступна пользователям.") %>
-        </p>
+    <div>
     </div>
 <% } %>
