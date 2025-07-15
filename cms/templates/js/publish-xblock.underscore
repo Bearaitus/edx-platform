@@ -7,7 +7,7 @@ if (visibilityState === 'staff_only') {
 } else if (published && !hasChanges) {
     title = gettext("Опубликовано (еще не выпущено)");
 } else if (published && hasChanges) {
-    title = gettext("Черновик (Неопубликованные изменения)");
+    title = gettext("Изменения не опубликованы");
 }
 
 var releaseLabel = gettext("Дата выпуска:");
