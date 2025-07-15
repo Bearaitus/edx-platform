@@ -159,33 +159,9 @@ upstream_info = UpstreamLink.try_get_for_block(xblock)
                                 <div class="nav-sub">
                                   <ul>
                                     % if not show_inline:
-                                        % if can_edit_visibility:
-                                            <li class="nav-item">
-                                                <a class="access-button" href="#" role="button">Управление доступом</a>
-                                            </li>
-                                        % endif
                                         % if can_move:
                                             <li class="nav-item">
                                                 <a class="move-button" href="#" role="button">Переместить</a>
-                                            </li>
-                                        % endif
-                                        % if use_tagging:
-                                            <li class="nav-item">
-                                                <a class="manage-tags-button" href="#" role="button">Управление тегами</a>
-                                            </li>
-                                        % endif
-                                        % if is_course:
-                                            <!--
-                                                Only show the "Copy to Clipboard" button for xblocks inside courses since
-                                                the copy/paste functionality is not yet implemented for LibraryContent.
-                                            -->
-                                            <li class="nav-item">
-                                                <a class="copy-button" href="#" role="button">Копировать в буфер обмена</a>
-                                            </li>
-                                        % endif
-                                        % if can_add:
-                                            <li class="nav-item">
-                                                <a class="duplicate-button" href="#" role="button">Дублировать</a>
                                             </li>
                                         % endif
                                     % endif
