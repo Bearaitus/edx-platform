@@ -1,12 +1,20 @@
-<% if (type === 'advanced' || templates.length > 1) { %>
-<button type="button" class="multiple-templates add-xblock-component-button" data-type="<%- type %>">
-<% } else { %>
-<button type="button" class="single-template add-xblock-component-button" data-type="<%- type %>" data-category="<%- templates[0].category %>">
-<% } %>
-  <span class="large-template-icon large-<%- type %>-icon"></span>
-  <span class="sr"> <%- gettext("Add Component:") %></span>
-  <span class="name"><%- display_name %></span>
-  <% if (type === 'library_v2' || type === 'itembank') { %>
-  <span class="beta"><%- gettext("Beta") %></span>
+<% if (
+    type !== 'openassessment' &&
+    type !== 'library' &&
+    type !== 'library_v2' &&
+    type !== 'itembank' &&
+    type !== 'drag-and-drop-v2'
+) { %>
+  <% if (type === 'advanced' || templates.length > 1) { %>
+    <button type="button" class="multiple-templates add-xblock-component-button" data-type="<%- type %>">
+  <% } else { %>
+    <button type="button" class="single-template add-xblock-component-button" data-type="<%- type %>" data-category="<%- templates[0].category %>">
   <% } %>
-</button>
+      <span class="large-template-icon large-<%- type %>-icon"></span>
+      <span class="sr"> <%- gettext("Add Component:") %></span>
+      <span class="name"><%- display_name %></span>
+      <% if (type === 'library_v2' || type === 'itembank') { %>
+        <span class="beta"><%- gettext("Beta") %></span>
+      <% } %>
+    </button>
+<% } %>
