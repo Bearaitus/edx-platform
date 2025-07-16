@@ -8,21 +8,24 @@
     %>">
         <ul class="new-component-template">
             <% for (var i = 0; i < templates.length; i++) { %>
-                <% if (!templates[i].boilerplate_name) { %>
-                <li class="editor-md empty">
-                    <button type="button" class="button-component" data-category="<%- templates[i].category %>">
-                        <%= HtmlUtils.HTML(support_indicator_template({support_level: templates[i].support_level})) %>
-                        <span class="name"><%- templates[i].display_name %></span>
-                    </button>
-                </li>
-                <% } else { %>
-                <li class="editor-md">
-                    <button type="button" class="button-component" data-category="<%- templates[i].category %>"
-                       data-boilerplate="<%- templates[i].boilerplate_name %>">
-                        <%= HtmlUtils.HTML(support_indicator_template({support_level: templates[i].support_level})) %>
-                        <span class="name"><%- templates[i].display_name %></span>
-                    </button>
-                </li>
+                <% const shouldSkip = templates[i].display_name === "Anonymous User ID" || templates[i].display_name === "IFrame Tool" || templates[i].display_name === "Zoomin Image Tool" || templates[i].display_name === "Announcement"; %>
+                <% if (!shouldSkip) { %>
+                    <% if (!templates[i].boilerplate_name) { %>
+                    <li class="editor-md empty">
+                        <button type="button" class="button-component" data-category="<%- templates[i].category %>">
+                            <%= HtmlUtils.HTML(support_indicator_template({support_level: templates[i].support_level})) %>
+                            <span class="name"><%- templates[i].display_name %></span>
+                        </button>
+                    </li>
+                    <% } else { %>
+                    <li class="editor-md">
+                        <button type="button" class="button-component" data-category="<%- templates[i].category %>"
+                           data-boilerplate="<%- templates[i].boilerplate_name %>">
+                            <%= HtmlUtils.HTML(support_indicator_template({support_level: templates[i].support_level})) %>
+                            <span class="name"><%- templates[i].display_name %></span>
+                        </button>
+                    </li>
+                    <% } %>
                 <% } %>
             <% } %>
         </ul>
