@@ -141,7 +141,6 @@
   // specific elements - course name/info
   .info-course {
     margin-right: flex-gutter();
-    border-right: 1px solid $gray-300;
     padding: ($baseline*0.75) flex-gutter() ($baseline*0.75) 0;
 
     .course-org,
