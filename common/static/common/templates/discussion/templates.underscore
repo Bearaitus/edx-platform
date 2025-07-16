@@ -145,7 +145,7 @@
     <div class="edit-post-body" aria-describedby="edit-post-editor-description" name="body"><%- body %></div>
 </div>
 <button type="submit" id="edit-post-submit" class="btn btn-primary submit post-update"><%- gettext("Update post") %></button>
-<button class="btn btn-outline-primary post-cancel"><%- gettext("Cancel") %></button>
+<button class="btn btn-outline-primary post-cancel"><%- gettext("Отменить") %></button>
 </script>
 <script aria-hidden="true" type="text/template" id="thread-response-template">
 <div class="discussion-response"></div>
@@ -243,7 +243,7 @@
     <ul class="edit-post-form-errors"></ul>
       <div class="edit-post-body" name="body" data-id="<%- id %>"><%- body %></div>
     <button type="submit" id="edit-response-submit"class="btn btn-primary post-update"><%- gettext("Update response") %></button>
-    <button class="btn btn-outline-primary post-cancel"><%- gettext("Cancel") %></button>
+    <button class="btn btn-outline-primary post-cancel"><%- gettext("Отменить") %></button>
 </div>
 </script>
 <script aria-hidden="true" type="text/template" id="response-comment-show-template">
@@ -290,7 +290,7 @@
     <ul class="edit-comment-form-errors"></ul>
       <div class="edit-comment-body" name="body" data-id="<%- id %>"><%- body %></div>
     <button type="submit" id="edit-comment-submit" class="btn btn-primary post-update"><%- gettext("Update comment") %></button>
-    <button class="btn btn-outline-primary post-cancel"><%- gettext("Cancel") %></button>
+    <button class="btn btn-outline-primary post-cancel"><%- gettext("Отменить") %></button>
 </div>
 </script>
 <script aria-hidden="true" type="text/template" id="thread-list-item-template">

@@ -44,7 +44,7 @@
     </div>
     <div class="actions">
         <button class="action action-primary" type="submit"><% if (isNew) { print(gettext("Create")) } else { print(gettext("Save")) } %></button>
-        <button class="action action-secondary action-cancel"><%- gettext("Cancel") %></button>
+        <button class="action action-secondary action-cancel"><%- gettext("Отменить") %></button>
         <% if (!isNew && (CMS.User.isGlobalStaff || !is_active)) { %>
             <span class="wrapper-delete-button">
                 <a class="button action-delete delete" href="#"><%- gettext("Delete") %></a>

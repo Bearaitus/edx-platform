@@ -52,7 +52,7 @@
         <% } %>
     </button>
     <button class="action action-cancel">
-        <span aria-hidden="true"><%- gettext("Cancel") %></span>
+        <span aria-hidden="true"><%- gettext("Отменить") %></span>
         <% if (action === 'create') { %>
             <span class="sr"><%- gettext("Cancel team creating.") %></span>
         <% } else if (action === 'edit') { %>

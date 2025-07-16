@@ -52,6 +52,6 @@
             <% } %>
         </ul>
     </div>
-    <button class="cancel-button" data-type="<%- type %>"><%- gettext("Cancel") %></button>
+    <button class="cancel-button" data-type="<%- type %>"><%- gettext("Отменить") %></button>
     <%= HtmlUtils.HTML(support_legend_template({support_legend: support_legend})) %>
 </div>
