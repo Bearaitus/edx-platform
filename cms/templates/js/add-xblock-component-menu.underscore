@@ -8,7 +8,7 @@
     %>">
         <ul class="new-component-template">
             <% for (var i = 0; i < templates.length; i++) { %>
-                <% const shouldSkip = templates[i].display_name === "Anonymous User ID" || templates[i].display_name === "IFrame Tool" || templates[i].display_name === "Zoomin Image Tool" || templates[i].display_name === "Announcement"; %>
+                <% const shouldSkip = templates[i].display_name === "Anonymous User ID" || templates[i].display_name === "IFrame Tool" || templates[i].display_name === "Zooming Image Tool" || templates[i].display_name === "Announcement"; %>
                 <% if (!shouldSkip) { %>
                     <% if (!templates[i].boilerplate_name) { %>
                     <li class="editor-md empty">

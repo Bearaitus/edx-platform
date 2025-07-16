@@ -17,7 +17,7 @@
         <ul class="new-component-template">
             <% for (var i = 0; i < templates.length; i++) { %>
                 <% if (templates[i].tab == "common") { %>
-                    <% const shouldSkip = templates[i].display_name === "Anonymous User ID" || templates[i].display_name === "IFrame Tool" || templates[i].display_name === "Zoomin Image Tool" || templates[i].display_name === "Announcement"; %>
+                    <% const shouldSkip = templates[i].display_name === "Anonymous User ID" || templates[i].display_name === "IFrame Tool" || templates[i].display_name === "Zooming Image Tool" || templates[i].display_name === "Announcement"; %>
                     <% if (!shouldSkip) { %>
                     <% if (!templates[i].boilerplate_name) { %>
                     <li class="editor-md empty">
@@ -44,7 +44,7 @@
         <ul class="new-component-template">
             <% for (var i = 0; i < templates.length; i++) { %>
                 <% if (templates[i].tab == "advanced") { %>
-                <% const shouldSkip = templates[i].display_name === "Anonymous User ID" || templates[i].display_name === "IFrame Tool" || templates[i].display_name === "Zoomin Image Tool" || templates[i].display_name === "Announcement"; %>
+                <% const shouldSkip = templates[i].display_name === "Anonymous User ID" || templates[i].display_name === "IFrame Tool" || templates[i].display_name === "Zooming Image Tool" || templates[i].display_name === "Announcement"; %>
                 <% if (!shouldSkip) { %>
                     <li class="editor-manual">
                         <button type="button" class="button-component" data-category="<%- templates[i].category %>"
