@@ -338,7 +338,7 @@ define(
 
                 // Verify prompt message is shown.
                 expect($('#page-notification #notification-error-title').html()).toEqual(
-                    "Studio's having trouble saving your work"
+                    "Ошибка! Обратитесь в службу поддержки"
                 );
 
                 // Verify English transcript container is not removed.

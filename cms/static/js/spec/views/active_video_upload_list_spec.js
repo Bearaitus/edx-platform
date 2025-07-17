@@ -210,7 +210,7 @@ define(
                         }
                     );
                     expect($('#notification-error-title').text().trim()).toEqual(
-                        "Studio's having trouble saving your work"
+                        "Ошибка! Обратитесь в службу поддержки"
                     );
                     expect($('#notification-error-description').text().trim()).toEqual('500 server errror');
                 });

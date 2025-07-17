@@ -75,7 +75,7 @@ function($, _, AjaxHelpers, TemplateHelpers, ViewHelpers, MoveXBlockModal, XBloc
                 notificationSpy = ViewHelpers.createNotificationSpy('Error');
             showModal();
             AjaxHelpers.respondWithError(requests);
-            ViewHelpers.verifyNotificationShowing(notificationSpy, "Studio's having trouble saving your work");
+            ViewHelpers.verifyNotificationShowing(notificationSpy, "Ошибка! Обратитесь в службу поддержки");
         });
     });
 });

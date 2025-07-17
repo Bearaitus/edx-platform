@@ -779,7 +779,7 @@ describe('MoveXBlock', function() {
             });
             modal.$el.find('.modal-actions .action-move').click();
             AjaxHelpers.respondWithError(requests);
-            ViewHelpers.verifyNotificationShowing(notificationSpy, "Studio's having trouble saving your work");
+            ViewHelpers.verifyNotificationShowing(notificationSpy, "Ошибка! Обратитесь в службу поддержки");
         });
 
         it('error message when undo move request fails', function() {
@@ -788,7 +788,7 @@ describe('MoveXBlock', function() {
             moveXBlockWithSuccess(requests);
             getMovedAlertNotification().find('.action-save').click();
             AjaxHelpers.respondWithError(requests);
-            ViewHelpers.verifyNotificationShowing(notificationSpy, "Studio's having trouble saving your work");
+            ViewHelpers.verifyNotificationShowing(notificationSpy, "Ошибка! Обратитесь в службу поддержки");
         });
     });
 });

@@ -35,7 +35,7 @@ define([
         });
         $(document).ajaxError(function(event, jqXHR, ajaxSettings) {
             var msg, contentType,
-                message = gettext('This may be happening because of an error with our server or your internet connection. Try refreshing the page or making sure you are online.'); // eslint-disable-line max-len
+                message = gettext(''); // eslint-disable-line max-len
             if (ajaxSettings.notifyOnError === false) {
                 return;
             }
@@ -44,7 +44,7 @@ define([
                 message = JSON.parse(jqXHR.responseText).error;
             }
             msg = new NotificationView.Error({
-                title: gettext("Studio's having trouble saving your work"),
+                title: gettext("Ошибка! Обратитесь в службу поддержки"),
                 message: message
             });
             console.log('Studio AJAX Error', { // eslint-disable-line no-console
