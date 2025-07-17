@@ -49,7 +49,6 @@ LIBRARY_KEY_PATTERN = r'(?P<library_key_string>library-v1:[^/+]+\+[^/+]+)'
 # oauth2_urlpatterns needs to be first to override any other login and
 # logout related views.
 urlpatterns = oauth2_urlpatterns + [
-    path('pt-edtechlab-admin', include('django.contrib.admin.urls')),
     path('', include('openedx.core.djangoapps.user_authn.urls_common')),
     path('', include('common.djangoapps.student.urls')),
     path('transcripts/upload', contentstore_views.upload_transcripts, name='upload_transcripts'),
