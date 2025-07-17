@@ -217,7 +217,7 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
             messageBody;
         xblockType = xblockType || 'component'; // eslint-disable-line no-param-reassign
         messageBody = StringUtils.interpolate(
-            gettext('Удаление этого {xblock_type} является постоянным и не может быть отменено.'),
+            gettext('Удаление этого компонента является постоянным и не может быть отменено.'),
             {xblock_type: xblockType},
             true
         );
@@ -225,13 +225,13 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
             messageBody += ' ' + gettext('Любой контент, который указал этот контент в качестве предварительного требования, также будет иметь удалены ограничения доступа.'); // eslint-disable-line max-len
             ViewUtils.confirmThenRunOperation(
                 StringUtils.interpolate(
-                    gettext('Удалить этот {xblock_type} (и предварительное требование)?'),
+                    gettext('Удалить'),
                     {xblock_type: xblockType},
                     true
                 ),
                 messageBody,
                 StringUtils.interpolate(
-                    gettext('Да, удалить этот {xblock_type}'),
+                    gettext('Да, удалить'),
                     {xblock_type: xblockType},
                     true
                 ),
@@ -240,13 +240,13 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
         } else {
             ViewUtils.confirmThenRunOperation(
                 StringUtils.interpolate(
-                    gettext('Удалить этот {xblock_type}?'),
+                    gettext('Удалить?'),
                     {xblock_type: xblockType},
                     true
                 ),
                 messageBody,
                 StringUtils.interpolate(
-                    gettext('Да, удалить этот {xblock_type}'),
+                    gettext('Да, Удалить'),
                     {xblock_type: xblockType},
                     true
                 ),
