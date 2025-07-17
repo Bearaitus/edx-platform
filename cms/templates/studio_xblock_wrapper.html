@@ -158,13 +158,6 @@ upstream_info = UpstreamLink.try_get_for_block(xblock)
                             <div class="wrapper wrapper-nav-sub" style="right: -10px; top: 45px;">
                                 <div class="nav-sub">
                                   <ul>
-                                    % if not show_inline:
-                                        % if can_move:
-                                            <li class="nav-item">
-                                                <a class="move-button" href="#" role="button">Переместить</a>
-                                            </li>
-                                        % endif
-                                    % endif
                                     % if can_delete:
                                         <li class="nav-item">
                                             <a class="delete-button" href="#" role="button">Удалить</a>
