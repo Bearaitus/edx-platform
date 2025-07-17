@@ -1,16 +1,6 @@
 {% block survey_report_banner %}
 {% load static %}
 {% if show_survey_report_banner %}
-<div id="originalContent" style="border: 3px solid #06405d; margin-bottom: 50px; rgb(0 0 0 / 18%) 0px 3px 5px; display: none;">
-  <div  style="background-color: #06405d;padding: 17px 37px;">
-    <h1 style="margin: 0; color: #FFFF; font-weight: 600;">Join the Open edX Data Sharing Initiative and shape the future of learning</h1>
-</div>
-<div style="padding: 17px 37px;">
-    <p>The Open edX Project relies on the collective strength of its community to be a thriving platform for online education.</p> 
-    <p>Open edX is a dynamic ecosystem and it is used in diverse learning environments. By sharing anonymized reports of aggregated data, you can contribute to the collective knowledge of the community. This data can help us all understand the reach of our project, make better decisions and ultimately support innovation in lifelong learning and advance next generation learning experience platforms.</p>
-    <p>We invite you to join the Open edX Data Sharing Initiative by sharing an anonymized reports of aggregated data from your institution's usage of the platform. The report data will be sent to Axim Collaborative, the non-profit behind the Open edX project.</p>
-    <p>If you agree and want to send a report you can click the button below. You can always send reports and see the status of reports you have sent in the past at <a href="/admin/survey_report/surveyreport/">admin/survey_report/surveyreport/</a> .</p>
-</div>
 <div style="display: flex; justify-content: flex-end; padding: 0 37px 17px;">
    <button id="dismissButton" type="button" style="background-color:var(--close-button-bg); color: var(--button-fg); border: none; border-radius: 4px; padding: 10px 20px; margin-right: 10px; cursor: pointer;">Dismiss</button>
     <form id='survey_report_form' method="POST" action="/survey_report/generate_report" style="margin: 0; padding: 0;">
