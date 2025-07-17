@@ -22,16 +22,6 @@ ${block_content | n, decode.utf8}
       % endif
   </div>
 %  endif
-%  if not disable_staff_debug_info:
-<div class="wrap-instructor-info">
-  <a class="instructor-info-action" href="#${element_id}_debug" rel="leanModal" id="${element_id}_trig">${_("Staff Debug Info")}</a>
-
-  %  if settings.FEATURES.get('ENABLE_STUDENT_HISTORY_VIEW') and \
-    location.block_type == 'problem':
-    <a class="instructor-info-action" href="#${element_id}_history" rel="leanModal" id="${element_id}_history_trig">${_("Submission history")}</a>
-  %  endif
-</div>
-%  endif
 
 <div aria-hidden="true" role="dialog" tabindex="-1" id="${element_id}_xqa-modal" class="modal xqa-modal">
   <div class="inner-wrapper">
@@ -118,25 +108,6 @@ ${block_content | n, decode.utf8}
     %if render_histogram:
     <div id="histogram_${element_id}" class="histogram" data-histogram="${histogram}"></div>
     %endif
-  </div>
-</div>
-
-<div aria-hidden="true" role="dialog" tabindex="-1" class="modal history-modal" id="${element_id}_history">
-  <div class="inner-wrapper">
-    <header>
-      <h2>${_("Submission History Viewer")}</h2>
-    </header>
-    <form id="${element_id}_history_form">
-      <label for="${element_id}_history_student_username">${_("Learner's {platform_name} email address or username:").format(platform_name=settings.PLATFORM_NAME)}</label>
-      <input tabindex="0" id="${element_id}_history_student_username" type="text" placeholder="${_('Enter the learner email address or username')}"/>
-      <input type="hidden" id="${element_id}_history_location" value="${location}"/>
-      <div class="submit">
-        <button name="submit" type="submit">${_("View History")}</button>
-      </div>
-    </form>
-
-    <div id="${element_id}_history_text" class="staff_info" style="display:block">
-    </div>
   </div>
 </div>
 
