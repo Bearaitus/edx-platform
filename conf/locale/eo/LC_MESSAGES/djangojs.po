@@ -6123,7 +6123,7 @@ msgstr ""
 "Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢тєтυ#"
 
 #: xmodule/js/src/problem/edit.js
-msgid "Explanation"
+msgid "Решение"
 msgstr "Éxplänätïön Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 #: xmodule/js/src/sequence/display.js

@@ -28415,7 +28415,7 @@ msgid "Insert a dropdown response"
 msgstr "Ìnsért ä dröpdöwn réspönsé Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕ#"
 
 #: cms/templates/widgets/problem-edit.html
-msgid "Explanation"
+msgid "Решение"
 msgstr "Éxplänätïön Ⱡ'σяєм ιρѕυм ∂σłσя #"
 
 #: cms/templates/widgets/problem-edit.html
