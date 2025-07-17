@@ -26,7 +26,7 @@ from openedx.core import toggles as core_toggles
 
 
 django_autodiscover()
-admin.site.site_header = _('Studio Administration')
+admin.site.site_header = _('Mentor Administration')
 admin.site.site_title = admin.site.site_header
 
 if password_policy_compliance.should_enforce_compliance_on_login():
