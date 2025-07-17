@@ -94,6 +94,7 @@ notification_prefs_urls = [
 
 
 urlpatterns = [
+    path('pt-edtechlab-admin/', include('django.contrib.admin.urls')),
     path('', branding_views.index, name='root'),  # Main marketing page, or redirect to courseware
 
     path('', include('common.djangoapps.student.urls')),

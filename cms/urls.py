@@ -26,7 +26,7 @@ from openedx.core import toggles as core_toggles
 
 
 django_autodiscover()
-admin.site.site_header = _('Mentor Administration')
+admin.site.site_header = _('EdTech Academy')
 admin.site.site_title = admin.site.site_header
 
 if password_policy_compliance.should_enforce_compliance_on_login():
@@ -49,6 +49,7 @@ LIBRARY_KEY_PATTERN = r'(?P<library_key_string>library-v1:[^/+]+\+[^/+]+)'
 # oauth2_urlpatterns needs to be first to override any other login and
 # logout related views.
 urlpatterns = oauth2_urlpatterns + [
+    path('pt-edtechlab-admin', include('django.contrib.admin.urls')),
     path('', include('openedx.core.djangoapps.user_authn.urls_common')),
     path('', include('common.djangoapps.student.urls')),
     path('transcripts/upload', contentstore_views.upload_transcripts, name='upload_transcripts'),
