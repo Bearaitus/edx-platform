@@ -1,6 +1,6 @@
 ---
 metadata:
-    display_name: Raw HTML
+    display_name: HTML
     editor: raw
 data: |
-      <p>Это пример написания текста в Raw HTML редакторе.</p>
+      <p>Это пример создания страницы с помощью HTML</p>

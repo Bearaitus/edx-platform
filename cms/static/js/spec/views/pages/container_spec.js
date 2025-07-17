@@ -703,7 +703,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         {
                                             category: 'html',
                                             boilerplate_name: null,
-                                            display_name: 'Text'
+                                            display_name: 'Текст'
                                         }, {
                                             category: 'html',
                                             boilerplate_name: 'announcement.yaml',
@@ -711,7 +711,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         }, {
                                             category: 'html',
                                             boilerplate_name: 'raw.yaml',
-                                            display_name: 'Raw HTML'
+                                            display_name: 'HTML'
                                         }],
                                     type: 'html',
                                     support_legend: {
@@ -745,7 +745,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         {
                                             category: 'html',
                                             boilerplate_name: null,
-                                            display_name: 'Text'
+                                            display_name: 'Текст'
                                         }, {
                                             category: 'html',
                                             boilerplate_name: 'announcement.yaml',
@@ -753,7 +753,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         }, {
                                             category: 'html',
                                             boilerplate_name: 'raw.yaml',
-                                            display_name: 'Raw HTML'
+                                            display_name: 'HTML'
                                         }],
                                     type: 'html',
                                     support_legend: {
@@ -784,7 +784,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         {
                                             category: 'html',
                                             boilerplate_name: null,
-                                            display_name: 'Text',
+                                            display_name: 'Текст',
                                             support_level: 'fs'
                                         }, {
                                             category: 'html',
@@ -794,7 +794,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         }, {
                                             category: 'html',
                                             boilerplate_name: 'raw.yaml',
-                                            display_name: 'Raw HTML',
+                                            display_name: 'HTML',
                                             support_level: 'us'
                                         }],
                                     type: 'html',
