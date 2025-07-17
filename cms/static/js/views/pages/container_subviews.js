@@ -166,7 +166,7 @@ function($, _, gettext, BaseView, ViewUtils, XBlockViewUtils, MoveXBlockUtils, H
             if (e && e.preventDefault) {
                 e.preventDefault();
             }
-            ViewUtils.runOperationShowingMessage(gettext('Publishing'),
+            ViewUtils.runOperationShowingMessage(gettext('Публикация'),
                 function() {
                     return xblockInfo.save({publish: 'make_public'}, {patch: true});
                 }).always(function() {
