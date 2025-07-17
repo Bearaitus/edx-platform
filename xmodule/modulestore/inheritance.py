@@ -153,7 +153,7 @@ class InheritanceMixin(XBlockMixin):
                "This key is granted for exclusive use in this course for the specified duration. "
                "Do not share the API key with other courses. Notify MathWorks immediately "
                "if you believe the key is exposed or compromised. To obtain a key for your course, "
-               "or to report an issue, please contact moocsupport@mathworks.com"),
+               "or to report an issue"),
         scope=Scope.settings
     )
     # This is should be scoped to content, but since it's defined in the policy
