@@ -59,7 +59,7 @@ COURSE_PROGRESS_NAME = 'progress'
 
 if settings.DEBUG or settings.FEATURES.get('ENABLE_DJANGO_ADMIN_SITE'):
     django_autodiscover()
-    admin.site.site_header = _('PT EdTechLab Administration')
+    admin.site.site_header = _('PT EdTechLab')
     admin.site.site_title = admin.site.site_header
 
     if password_policy_compliance.should_enforce_compliance_on_login():
