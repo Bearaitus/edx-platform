@@ -25,7 +25,7 @@ DEFAULT_GRADING_POLICY = {
                     "drop_count": 0,
                     "min_count": 1,
                     "short_label": "Теория",
-                    "type": "Теория",
+                    "type": "Теоретический материал",
                     "weight": 0.1
                 },
                 {
