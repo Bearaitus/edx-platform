@@ -190,7 +190,7 @@ class ProblemBlock(
         display_name=_("Maximum Attempts"),
         help=_("Defines the number of times a student can try to answer this problem. "
                "If the value is not set, infinite attempts are allowed."),
-        values={"min": 0}, scope=Scope.settings
+        values={"min": 3}, scope=Scope.settings
     )
     grading_method = String(
         display_name=_("Grading Method"),
