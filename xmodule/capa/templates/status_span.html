@@ -7,7 +7,4 @@
 <span class="status ${'' if hide_correctness == True else status.classname}" id="status_${status_id}"
       data-tooltip="${'' if hide_correctness == True else status.display_tooltip}">
 % endif
-  % if hide_correctness == False:
-  <span class="sr">${status.display_name}</span><span class="status-icon" aria-hidden="true"></span>
-  % endif
 </span>
