@@ -19,10 +19,10 @@ const UpIcon = (
 );
 
 const BLOCK_TYPE_NAME = {
-    course: 'Course',
-    chapter: 'Section',
-    sequential: 'Sub-section',
-    vertical: 'Unit',
+    course: 'Курс',
+    chapter: 'Модуль',
+    sequential: 'Часть',
+    vertical: 'Страница',
 };
 
 const BlockType = PropTypes.shape({
