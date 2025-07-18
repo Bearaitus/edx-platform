@@ -1052,7 +1052,7 @@ def determine_label(display_name, block_type):
     """
     if display_name in {"", None}:
         if block_type == 'html':
-            return _("Text")
+            return _("Текст")
         else:
             return block_type
     else:
