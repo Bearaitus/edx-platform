@@ -3,6 +3,7 @@
     type !== 'library' &&
     type !== 'library_v2' &&
     type !== 'itembank' &&
+    type !== 'video' &&
     type !== 'drag-and-drop-v2'
 ) { %>
   <% if (type === 'advanced' || templates.length > 1) { %>
