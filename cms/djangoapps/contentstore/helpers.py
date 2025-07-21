@@ -181,7 +181,7 @@ def xblock_type_display_name(xblock, default_display_name=None):
     if category == 'chapter':
         return _('Module')
     elif category == 'sequential':
-        return _('Subsection')
+        return _('Part')
     elif category == 'vertical':
         return _('Page')
     elif category == 'problem':
