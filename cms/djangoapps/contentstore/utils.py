@@ -1864,13 +1864,13 @@ def _get_course_index_context(request, course_key, course_block):
     Utils is used to get context of course index outline.
     It is used for both DRF and django views.
     """
-
     from cms.djangoapps.contentstore.views.course import (
         course_outline_initial_state,
         _course_outline_json,
         _deprecated_blocks_info,
     )
     from openedx.core.djangoapps.content_staging import api as content_staging_api
+    import datetime
 
     lms_link = get_lms_link_for_item(course_block.location)
     reindex_link = None
@@ -1880,23 +1880,18 @@ def _get_course_index_context(request, course_key, course_block):
     sections = course_block.get_children()
     course_structure = _course_outline_json(request, course_block)
     locator_to_show = request.GET.get('show', None)
-
-    course_release_date = (
-        get_default_time_display(course_block.start)
-        if course_block.start != DEFAULT_START_DATE
-        else _("Go to the page")
-    )
-
+    if course_block.start != DEFAULT_START_DATE:
+        # Format the date in English format (e.g., "Month Day, Year")
+        course_release_date = course_block.start.strftime("%B %d, %Y")
+    else:
+        course_release_date = _("Go to the page")
     settings_url = reverse_course_url('settings_handler', course_key)
-
     try:
         current_action = CourseRerunState.objects.find_first(course_key=course_key, should_display=True)
     except (ItemNotFoundError, CourseActionStateItemNotFoundError):
         current_action = None
-
     deprecated_block_names = [block.name for block in deprecated_xblocks()]
     deprecated_blocks_info = _deprecated_blocks_info(course_block, deprecated_block_names)
-
     frontend_app_publisher_url = configuration_helpers.get_value_for_org(
         course_block.location.org,
         'FRONTEND_APP_PUBLISHER_URL',
@@ -1905,12 +1900,10 @@ def _get_course_index_context(request, course_key, course_block):
     # gather any errors in the currently stored proctoring settings.
     advanced_dict = CourseMetadata.fetch(course_block)
     proctoring_errors = CourseMetadata.validate_proctoring_settings(course_block, advanced_dict, request.user)
-
     user_clipboard = content_staging_api.get_user_clipboard_json(request.user.id, request)
     course_block.discussions_settings['discussion_configuration_url'] = (
         f'{get_pages_and_resources_url(course_block.id)}/discussion/settings'
     )
-
     course_index_context = {
         'language_code': request.LANGUAGE_CODE,
         'context_course': course_block,
@@ -1938,7 +1931,6 @@ def _get_course_index_context(request, course_key, course_block):
         'proctoring_errors': proctoring_errors,
         'taxonomy_tags_widget_url': get_taxonomy_tags_widget_url(course_block.id),
     }
-
     return course_index_context
 
 
