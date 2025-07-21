@@ -11,6 +11,6 @@
       <input type="text" value="<%= value %>" class="xblock-field-input incontext-editor-input" data-metadata-name="<%- fieldName %>"> <% // xss-lint: disable=underscore-not-escaped %>
     </label>
     <button class="sr action action-primary" name="submit" type="submit"><%- gettext("Save") %></button>
-    <button class="sr action action-secondary" name="cancel" type="button"><%- gettext("Отменить") %></button>
+    <button class="sr action action-secondary" name="cancel" type="button"><%- gettext("Cancel") %></button>
   </form>
 </div>

@@ -11,14 +11,14 @@
     <div class="notification-btn-wrapper">
         % if notification_name == 'hint':
         <button type="button" class="btn btn-default btn-small notification-btn hint-button">
-          ${_('Вперед Hint')}
+          ${_('Next Hint')}
         </button>
         % endif
         % if answer_notification_type == 'incorrect':
-        <p>${_('Ответ неправильный')}</p>
+        <p>${_('Incorrect answer')}</p>
         % endif
         % if answer_notification_type == 'success':
-        <p>${_('Ответ правильный')}</p>
+        <p>${_('Correct answer')}</p>
         % endif
         <button type="button" class="btn btn-default btn-small notification-btn review-btn sr">${_('Review')}</button>
     </div>

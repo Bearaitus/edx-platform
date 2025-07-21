@@ -940,13 +940,13 @@ def _create_or_rerun_course(request):
     except DuplicateCourseError:
         return JsonResponse({
             'ErrMsg': _(
-                'Уже существует курс с такими же параметрами. Пожалуйста, '
-                'измените либо параметр "Компания-разработчик курса", либо "Идентификатор курса", чтобы он был уникальным.'
+                'A course with these parameters already exists. Please '
+                'change either the "Course Developer" or the "Course ID" to be unique.'
             ),
             'OrgErrMsg': _(
-                'Пожалуйста, измените либо "Компания-разработчик курса", либо "Идентификатор курса", чтобы он был уникальным.'),
+                'Please change either the "Course Developer" or the "Course ID" to be unique.'),
             'CourseErrMsg': _(
-                'Пожалуйста, измените либо "Компания-разработчик курса", либо "Идентификатор курса", чтобы он был уникальным.'),
+                'Please change either the "Course Developer" or the "Course ID" to be unique.'),
         })
     except InvalidKeyError as error:
         return JsonResponse({

@@ -24,15 +24,15 @@ DEFAULT_GRADING_POLICY = {
                 {
                     "drop_count": 0,
                     "min_count": 1,
-                    "short_label": "Теория",
-                    "type": "Теоретический материал",
+                    "short_label": "Theory",
+                    "type": "Theoretical Material",
                     "weight": 0.1
                 },
                 {
                     "drop_count": 0,
                     "min_count": 1,
-                    "short_label": "Практика",
-                    "type": "Практические кейсы",
+                    "short_label": "Practice",
+                    "type": "Practical Cases",
                     "weight": 0.1
                 }
             ],

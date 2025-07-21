@@ -1,6 +1,3 @@
-/**
- * Предоставляет утилиты для представлений для работы с xblocks.
- */
 define(['jquery', 'underscore', 'gettext', 'common/js/components/utils/view_utils', 'js/utils/module',
     'js/models/xblock_info', 'edx-ui-toolkit/js/utils/string-utils'],
 function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
@@ -8,27 +5,6 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
     var addXBlock, duplicateXBlock, deleteXBlock, createUpdateRequestData, updateXBlockField, VisibilityState,
         getXBlockVisibilityClass, getXBlockListTypeClass, updateXBlockFields, getXBlockType, findXBlockInfo,
         moveXBlock, pasteXBlock;
-    /**
-         * Представляет возможные состояния видимости для xblock:
-         *
-         *   live - блок и все его потомки видны студентам (кроме персонала)
-         *     Примечание: Live означает и опубликованный, и выпущенный.
-         *
-         *   ready - блок готов к выпуску, и все его потомки видны или готовы (кроме персонала)
-         *     Примечание: контент готов, когда он опубликован и запланирован с датой выпуска в будущем.
-         *
-         *   unscheduled - блок и все его потомки не имеют даты выпуска (кроме персонала)
-         *     Примечание: допустимо, чтобы элементы были опубликованы без даты выпуска, в этом случае они не запланированы.
-         *
-         *   needsAttention - блок или его потомки требуют внимания
-         *     т.е. есть контент, который полностью не находится в live, ready, unscheduled или только для персонала.
-         *     Например: в одном подразделе есть черновик контента или в одном разделе есть как невыпущенный, так и выпущенный контент.
-         *
-         *   staffOnly - весь контент блока должен быть показан только персоналу
-         *     Примечание: элементы только для персонала не влияют на состояние их родительского элемента.
-         *
-         *   hideFromTOC - весь контент блока должен быть скрыт из оглавления.
-         */
     VisibilityState = {
         live: 'live',
         ready: 'ready',
@@ -38,20 +14,14 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
         gated: 'gated',
         hideFromTOC: 'hide_from_toc'
     };
-    /**
-         * Добавляет xblock на основе атрибутов данных указанной кнопки добавления. Возвращается промис,
-         * и новый локатор передается всем обработчикам done.
-         * @param target Кнопка добавления, по которой был выполнен клик.
-         * @returns {jQuery promise} Промис, представляющий добавление xblock.
-         */
     addXBlock = function(target) {
         var parentLocator = target.data('parent'),
             category = target.data('category'),
             displayName = target.data('default-name');
-        return ViewUtils.runOperationShowingMessage(gettext('Добавление'),
+        return ViewUtils.runOperationShowingMessage(gettext('Adding'),
             function() {
                 var addOperation = $.Deferred();
-                analytics.track('Создан ' + category, {
+                analytics.track('Created ' + category, {
                     course: course_location_analytics,
                     display_name: displayName
                 });
@@ -70,7 +40,7 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
     pasteXBlock = function(target) {
         var parentLocator = target.data('parent'),
             displayName = target.data('default-name');
-        return ViewUtils.runOperationShowingMessage(gettext('Вставка'), () => {
+        return ViewUtils.runOperationShowingMessage(gettext('Pasting'), () => {
             return $.postJSON(ModuleUtils.getUpdateUrl(), {
                 parent_locator: parentLocator,
                 staged_content: "clipboard",
@@ -86,36 +56,36 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
             const notices = [];
             if (errorFiles.length) {
                 notices.push((next) => new PromptView.Error({
-                    title: gettext("Возникли ошибки"),
+                    title: gettext("Errors Occurred"),
                     message: (
-                        gettext("Не удалось добавить следующие необходимые файлы в курс:") +
+                        gettext("Failed to add the following required files to the course:") +
                         " " + errorFiles.join(", ")
                     ),
-                    actions: {primary: {text: gettext("ОК"), click: (x) => { x.hide(); next(); }}},
+                    actions: {primary: {text: gettext("OK"), click: (x) => { x.hide(); next(); }}},
                 }));
             }
             if (conflictingFiles.length) {
                 notices.push((next) => new PromptView.Warning({
-                    title: gettext("Возможно, вам потребуется вручную обновить файл(ы)"),
+                    title: gettext("You may need to manually update the file(s)"),
                     message: (
                         gettext(
-                            "Следующие файлы уже существуют в этом курсе, но не соответствуют " +
-                            "версии, используемой в вставленном компоненте:"
+                            "The following files already exist in this course but do not match " +
+                            "the version used in the embedded component:"
                         ) + " " + conflictingFiles.join(", ")
                     ),
-                    actions: {primary: {text: gettext("ОК"), click: (x) => { x.hide(); next(); }}},
+                    actions: {primary: {text: gettext("OK"), click: (x) => { x.hide(); next(); }}},
                 }));
             }
             if (newFiles.length) {
                 notices.push(() => new NotificationView.Info({
-                    title: gettext("Новые файлы добавлены в Файлы и загрузки."),
+                    title: gettext("New files have been added to Files and Uploads."),
                     message: (
-                        gettext("Следующие необходимые файлы были импортированы в этот курс:") +
+                        gettext("The following required files have been imported into this course:") +
                         " "  + newFiles.join(", ")
                     ),
                     actions: {
                         primary: {
-                            text: gettext('Просмотреть файлы'),
+                            text: gettext('View files'),
                             click: function(notification) {
                                 const article = document.querySelector('[data-course-assets]');
                                 const assetsUrl = $(article).attr('data-course-assets');
@@ -124,7 +94,7 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
                             }
                         },
                         secondary: {
-                            text: gettext('Отклонить'),
+                            text: gettext('Dismiss'),
                             click: function(notification) {
                                 return notification.hide();
                             }
@@ -133,25 +103,16 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
                 }));
             }
             if (notices.length) {
-                // Показываем уведомления по одному за раз:
                 const showNext = () => {
                     const view = notices.shift()(showNext);
                     view.show();
                 }
-                // Задержка, чтобы избежать конфликта с уведомлением "Вставка...".
                 setTimeout(showNext, 1250);
             }
         });
     };
-    /**
-         * Дублирует указанный xblock в его родительском xblock.
-         * @param {jquery Element}  xblockElement  Дублируемый элемент xblock.
-         * @param {jquery Element}  parentElement  Родительский элемент xblock элемента, который необходимо дублировать,
-         *      новый дублированный xblock будет помещен под этот xblock.
-         * @returns {jQuery promise} Промис, представляющий дублирование xblock.
-         */
     duplicateXBlock = function(xblockElement, parentElement) {
-        return ViewUtils.runOperationShowingMessage(gettext('Дублирование'),
+        return ViewUtils.runOperationShowingMessage(gettext('Duplicate'),
             function() {
                 var duplicationOperation = $.Deferred();
                 $.postJSON(ModuleUtils.getUpdateUrl(), {
@@ -166,18 +127,9 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
                 return duplicationOperation.promise();
             });
     };
-    /**
-         * Перемещает указанный xblock в новый родительский xblock.
-         * @param {String}  sourceLocator  Локатор элемента xblock, который необходимо переместить.
-         * @param {String}  targetParentLocator  Локатор целевого родительского xblock, перемещенный xblock будет помещен
-         *      под этот xblock.
-         * @param {Integer}  targetIndex  Желаемая позиция индекса xblock в родительском xblock. Если указана,
-         *      xblock будет помещен в родительском xblock на определенной позиции индекса.
-         * @returns {jQuery promise} Промис, представляющий перемещение xblock.
-         */
     moveXBlock = function(sourceLocator, targetParentLocator, targetIndex) {
         var moveOperation = $.Deferred(),
-            operationText = targetIndex !== undefined ? gettext('Отмена перемещения') : gettext('Перемещение');
+            operationText = targetIndex !== undefined ? gettext('Cancel Move') : gettext('Move');
         return ViewUtils.runOperationShowingMessage(operationText,
             function() {
                 $.patchJSON(ModuleUtils.getUpdateUrl(), {
@@ -193,17 +145,11 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
                 return moveOperation.promise();
             });
     };
-    /**
-         * Удаляет указанный xblock.
-         * @param xblockInfo Модель для xblock, который необходимо удалить.
-         * @param xblockType Строка, представляющая тип xblock, который необходимо удалить.
-         * @returns {jQuery promise} Промис, представляющий удаление xblock.
-         */
     deleteXBlock = function(xblockInfo, xblockType) {
         var deletion = $.Deferred(),
             url = ModuleUtils.getUpdateUrl(xblockInfo.id),
             operation = function() {
-                ViewUtils.runOperationShowingMessage(gettext('Удаление'),
+                ViewUtils.runOperationShowingMessage(gettext('Deleting'),
                     function() {
                         return $.ajax({
                             type: 'DELETE',
@@ -217,21 +163,21 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
             messageBody;
         xblockType = xblockType || 'component'; // eslint-disable-line no-param-reassign
         messageBody = StringUtils.interpolate(
-            gettext('Удаление этого компонента является постоянным и не может быть отменено.'),
+            gettext('Deleting this component is permanent and cannot be undone.'),
             {xblock_type: xblockType},
             true
         );
         if (xblockInfo.get('is_prereq')) {
-            messageBody += ' ' + gettext('Любой контент, который указал этот контент в качестве предварительного требования, также будет иметь удалены ограничения доступа.'); // eslint-disable-line max-len
+            messageBody += ' ' + gettext('Any content that specified this content as a prerequisite will also have its access restrictions removed.'); // eslint-disable-line max-len
             ViewUtils.confirmThenRunOperation(
                 StringUtils.interpolate(
-                    gettext('Удалить'),
+                    gettext('Delete'),
                     {xblock_type: xblockType},
                     true
                 ),
                 messageBody,
                 StringUtils.interpolate(
-                    gettext('Да, удалить'),
+                    gettext('Yes, Delete'),
                     {xblock_type: xblockType},
                     true
                 ),
@@ -240,13 +186,13 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
         } else {
             ViewUtils.confirmThenRunOperation(
                 StringUtils.interpolate(
-                    gettext('Удалить?'),
+                    gettext('Delete?'),
                     {xblock_type: xblockType},
                     true
                 ),
                 messageBody,
                 StringUtils.interpolate(
-                    gettext('Да, Удалить'),
+                    gettext('Yes, Delete'),
                     {xblock_type: xblockType},
                     true
                 ),
@@ -263,36 +209,36 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
         };
     };
     /**
-         * Обновляет указанное поле xblock до нового значения.
-         * @param {Backbone Model} xblockInfo Модель XBlockInfo, представляющая xblock.
-         * @param {String} fieldName Имя поля xblock, которое необходимо обновить.
-         * @param {*} newValue Новое значение для поля.
-         * @returns {jQuery promise} Промис, представляющий обновление поля.
+         * Updates the specified field of an xblock to the new value.
+         * @param {Backbone Model} xblockInfo The XBlockInfo model representing the xblock.
+         * @param {String} fieldName The name of the xblock field to update.
+         * @param {*} newValue The new value for the field.
+         * @returns {jQuery promise} A promise representing the field update.
          */
     updateXBlockField = function(xblockInfo, fieldName, newValue) {
         var requestData = createUpdateRequestData(fieldName, newValue);
-        return ViewUtils.runOperationShowingMessage(gettext('Сохранение'),
+        return ViewUtils.runOperationShowingMessage(gettext('Saving'),
             function() {
                 return xblockInfo.save(requestData, {patch: true});
             });
     };
     /**
-         * Обновляет указанные поля xblock до новых значений.
-         * @param {Backbone Model} xblockInfo Модель XBlockInfo, представляющая xblock.
-         * @param {Object} xblockData Объект, представляющий данные xblock, принимаемые на сервере.
-         * @param {Object} [options] Хеш с параметрами.
-         * @returns {jQuery promise} Промис, представляющий обновление значений xblock.
+         * Updates the specified fields of an xblock to the new values.
+         * @param {Backbone Model} xblockInfo The XBlockInfo model representing the xblock.
+         * @param {Object} xblockData The object representing xblock data accepted by the server.
+         * @param {Object} [options] A hash with options.
+         * @returns {jQuery promise} A promise representing the xblock values update.
          */
     updateXBlockFields = function(xblockInfo, xblockData, options) {
         options = _.extend({}, {patch: true}, options);
-        return ViewUtils.runOperationShowingMessage(gettext('Сохранение'),
+        return ViewUtils.runOperationShowingMessage(gettext('Saving'),
             function() {
                 return xblockInfo.save(xblockData, options);
             }
         );
     };
     /**
-         * Возвращает класс CSS для представления указанного состояния видимости xblock.
+         * Returns a CSS class for representing the specified xblock visibility state.
          */
     getXBlockVisibilityClass = function(visibilityState) {
         if (visibilityState === VisibilityState.staffOnly) {
@@ -347,8 +293,8 @@ function($, _, gettext, ViewUtils, ModuleUtils, XBlockInfo, StringUtils) {
             displayName = xblockWrapperElement.find(
                 '.xblock-header .header-details .xblock-display-name'
             ).text().trim();
-            // Если не найдено, попробуйте найти старый способ отображения страницы устройства.
-            // Сейчас используется только для статических страниц.
+            // If not found, try to find the old page device display way.
+            // Only used for static pages now.
             if (!displayName) {
                 displayName = xblockElement.find('.component-header').text().trim();
             }

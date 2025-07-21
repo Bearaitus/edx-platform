@@ -44,7 +44,7 @@ define([
                 message = JSON.parse(jqXHR.responseText).error;
             }
             msg = new NotificationView.Error({
-                title: gettext("Ошибка! Обратитесь в службу поддержки"),
+                title: gettext("Error! Please Contact Support"),
                 message: message
             });
             console.log('Studio AJAX Error', { // eslint-disable-line no-console

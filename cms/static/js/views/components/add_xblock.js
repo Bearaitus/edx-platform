@@ -75,7 +75,7 @@ function($, _, gettext, BaseView, ViewUtils, AddXBlockButton, AddXBlockMenu, Add
                     this.options.libraryContentPickerUrl,
                     function(data) {
                         ViewUtils.runOperationShowingMessage(
-                            gettext('Добавление'),
+                            gettext('Adding'),
                             _.bind(this.options.createComponent, this, data, $element),
                         ).always(function() {
                             // Restore the scroll position of the buttons so that the new
@@ -86,7 +86,7 @@ function($, _, gettext, BaseView, ViewUtils, AddXBlockButton, AddXBlockMenu, Add
                 );
             } else {
                 ViewUtils.runOperationShowingMessage(
-                    gettext('Добавление'),
+                    gettext('Adding'),
                     _.bind(this.options.createComponent, this, saveData, $element),
                 ).always(function() {
                     // Restore the scroll position of the buttons so that the new

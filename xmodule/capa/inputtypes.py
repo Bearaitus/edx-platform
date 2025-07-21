@@ -99,8 +99,8 @@ class Status(object):
         }
         tooltips = {
             # Translators: these are tooltips that indicate the state of an assessment question
-            'correct': _('Ответ правильный'),
-            'incorrect': _('Ответ неправильный'),
+            'correct': _('Correct answer'),
+            'incorrect': _('Incorrect answer'),
             'partially-correct': _('This answer is partially correct.'),
             'queued': _('This answer is being processed.'),
         }

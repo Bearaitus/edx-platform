@@ -3,4 +3,4 @@ metadata:
     display_name: HTML
     editor: raw
 data: |
-      <p>Это пример создания страницы с помощью HTML</p>
+      <p>This is an example of creating a page using HTML.</p>

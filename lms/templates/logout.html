@@ -1,40 +1,31 @@
 {% extends "main_django.html" %}
 {% load i18n static %}
 {% load django_markup %}
-
-{% block title %}Вы вышли из системы | {{ block.super }}{% endblock %}
-
+{% block title %}You have been logged out | {{ block.super }}{% endblock %}
 {% block body %}
     {% if show_tpa_logout_link %}
-        <h1>Вы вышли из системы.</h1>
-
+        <h1>You have been logged out.</h1>
         <p style="text-align: center; margin-bottom: 20px;">
-            <a href="{{ tpa_logout_url }}">Нажмите здесь</a>, чтобы завершить сеанс единого входа (SSO).
+            <a href="{{ tpa_logout_url }}">Click here</a> to complete the single sign-on (SSO) logout.
         </p>
-
     {% else %}
         {% if enterprise_target %}
-            <h1>Выполняется вход в систему.</h1>
-
+            <h1>Logging in.</h1>
             <p style="text-align: center; margin-bottom: 20px;">
-                Это может занять некоторое время. Если вас не перенаправили, перейдите на главную страницу.
+                This may take a moment. If you are not redirected, please visit the homepage.
             </p>
         {% else %}
-            <h1>Вы вышли из системы.</h1>
-
+            <h1>You have been logged out.</h1>
             <p style="text-align: center; margin-bottom: 20px;">
-                Если вы не были перенаправлены в течение 5 секунд, <a href="{{ target }}">нажмите здесь, чтобы перейти на главную страницу</a>.
+                If you are not redirected within 5 seconds, <a href="{{ target }}">click here to go to the homepage</a>.
             </p>
         {% endif %}
-
         <script type="text/javascript" src="{% static 'js/jquery.allLoaded.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/logout.js' %}"></script>
     {% endif %}
-
     <div id="iframeContainer" style="visibility: hidden" data-redirect-url="{{ target }}">
         {% for uri in logout_uris %}
             <iframe src="{{ uri }}"></iframe>
         {% endfor %}
     </div>
-
 {% endblock body %}

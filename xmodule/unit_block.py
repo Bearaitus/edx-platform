@@ -38,7 +38,7 @@ class UnitBlock(XBlock):
         display_name=_("Display Name"),
         help=_("The display name for this component."),
         scope=Scope.settings,
-        default=_("Страница"),
+        default=_("Page"),
     )
 
     def student_view(self, context=None):

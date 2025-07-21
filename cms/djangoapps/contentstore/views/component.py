@@ -262,9 +262,9 @@ def get_component_templates(courselike, library=False):  # lint-amnesty, pylint:
 
     component_display_names = {
         'discussion': _("Discussion"),
-        'html': _("Текст"),
-        'problem': _("Вопросы"),
-        'video': _("Видео"),
+        'html': _("Text"),
+        'problem': _("Problem"),
+        'video': _("Video"),
         'openassessment': _("Open Response"),
         'library': _("Legacy Library"),
         'library_v2': _("Library Content"),

@@ -64,7 +64,7 @@ class CapaTargetedFeedbackTest(unittest.TestCase):
 
             <solution explanation-id="feedbackC">
             <div class="detailed-solution">
-                <p>Решение</p>
+                <p>Explanation</p>
                 <p>This is the solution explanation</p>
                 <p>Not much to explain here, sorry!</p>
             </div>
@@ -176,7 +176,7 @@ class CapaTargetedFeedbackTest(unittest.TestCase):
 
             <solution explanation-id="feedbackC">
             <div class="detailed-solution">
-                <p>Решение</p>
+                <p>Explanation</p>
                 <p>This is the solution explanation</p>
                 <p>Not much to explain here, sorry!</p>
             </div>
@@ -279,7 +279,7 @@ class CapaTargetedFeedbackTest(unittest.TestCase):
 
             <solution explanation-id="feedbackC">
             <div class="detailed-solution">
-                <p>Решение</p>
+                <p>Explanation</p>
                 <p>This is the solution explanation</p>
                 <p>Not much to explain here, sorry!</p>
             </div>
@@ -349,7 +349,7 @@ class CapaTargetedFeedbackTest(unittest.TestCase):
 
             <solution explanation-id="feedbackC">
             <div class="detailed-solution">
-                <p>Решение</p>
+                <p>Explanation</p>
                 <p>This is the solution explanation</p>
                 <p>Not much to explain here, sorry!</p>
             </div>
@@ -425,7 +425,7 @@ class CapaTargetedFeedbackTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="feedbackC2">
                 <div class="detailed-solution">
-                    <p>Решение</p>
+                    <p>Explanation</p>
                     <p>This is the other solution explanation</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -487,7 +487,7 @@ class CapaTargetedFeedbackTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="feedbackC">
                 <div class="detailed-solution">
-                    <p>Решение</p>
+                    <p>Explanation</p>
                     <p>This is the solution explanation</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>
@@ -550,7 +550,7 @@ class CapaTargetedFeedbackTest(unittest.TestCase):
             <solutionset>
                 <solution explanation-id="feedbackC">
                 <div class="detailed-solution">
-                    <p>Решение</p>
+                    <p>Explanation</p>
                     <p>This is the solution explanation</p>
                     <p>Not much to explain here, sorry!</p>
                 </div>

@@ -23,7 +23,7 @@
                         <li class="editor-md empty">
                             <button type="button" class="button-component" data-category="<%- templates[i].category %>">
                                 <%= HtmlUtils.HTML(support_indicator_template({support_level: templates[i].support_level})) %>
-                                <span class="name">Текст</span>
+                                <span class="name">Text</span>
                             </button>
                         </li>
                     <% } else if (!templates[i].boilerplate_name) { %>
@@ -56,7 +56,7 @@
                             <button type="button" class="button-component" data-category="<%- templates[i].category %>"
                                    data-boilerplate="<%- templates[i].boilerplate_name %>">
                                 <%= HtmlUtils.HTML(support_indicator_template({support_level: templates[i].support_level})) %>
-                                <span class="name">Текст</span>
+                                <span class="name">Text</span>
                             </button>
                         </li>
                     <% } else { %>
@@ -75,6 +75,6 @@
             <% } %>
         </ul>
     </div>
-    <button class="cancel-button" data-type="<%- type %>"><%- gettext("Отменить") %></button>
+    <button class="cancel-button" data-type="<%- type %>"><%- gettext("Cancel") %></button>
     <%= HtmlUtils.HTML(support_legend_template({support_legend: support_legend})) %>
 </div>

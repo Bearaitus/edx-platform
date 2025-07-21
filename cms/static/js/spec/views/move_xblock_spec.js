@@ -779,7 +779,7 @@ describe('MoveXBlock', function() {
             });
             modal.$el.find('.modal-actions .action-move').click();
             AjaxHelpers.respondWithError(requests);
-            ViewHelpers.verifyNotificationShowing(notificationSpy, "Ошибка! Обратитесь в службу поддержки");
+            ViewHelpers.verifyNotificationShowing(notificationSpy, "Error! Please Contact Support");
         });
 
         it('error message when undo move request fails', function() {
@@ -788,7 +788,7 @@ describe('MoveXBlock', function() {
             moveXBlockWithSuccess(requests);
             getMovedAlertNotification().find('.action-save').click();
             AjaxHelpers.respondWithError(requests);
-            ViewHelpers.verifyNotificationShowing(notificationSpy, "Ошибка! Обратитесь в службу поддержки");
+            ViewHelpers.verifyNotificationShowing(notificationSpy, "Error! Please Contact Support");
         });
     });
 });

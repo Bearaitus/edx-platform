@@ -210,7 +210,7 @@ define(
                         }
                     );
                     expect($('#notification-error-title').text().trim()).toEqual(
-                        "Ошибка! Обратитесь в службу поддержки"
+                        "Error! Please contact support"
                     );
                     expect($('#notification-error-description').text().trim()).toEqual('500 server errror');
                 });

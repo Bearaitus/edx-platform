@@ -17,6 +17,6 @@
   </div>
   <div class="row">
     <a href="#" class="save-button"><%- gettext("Save") %></a>
-    <a href="#" class="cancel-button"><%- gettext("Отменить") %></a>
+    <a href="#" class="cancel-button"><%- gettext("Cancel") %></a>
   </div>
 </form>

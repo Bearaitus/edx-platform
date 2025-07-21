@@ -22,5 +22,5 @@
     <input class="enrollment-reason-other" id="enrollment-reason-other" type="text" placeholder="<%- gettext('Explain if other.') %>" />
   </div>
   <button class="enrollment-change-submit"><%- gettext("Submit enrollment change") %></button>
-  <button class="enrollment-change-cancel"><%- gettext("Отменить") %></button>
+  <button class="enrollment-change-cancel"><%- gettext("Cancel") %></button>
 </form>

@@ -8,7 +8,7 @@
   </numericalresponse>
   <solution>
     <div class="detailed-solution">
-      <p>Решение</p>
+      <p>Explanation</p>
       <p>Although you can get an exact value by typing 502*9 into a calculator, the result will be close to 500*10, or 5,000. The grader accepts any response within 15% of the true value, 4518, so that you can use any estimation technique that you like.</p>
     </div>
   </solution>

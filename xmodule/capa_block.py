@@ -179,7 +179,7 @@ class ProblemBlock(
         scope=Scope.settings,
         # it'd be nice to have a useful default but it screws up other things; so,
         # use display_name_with_default for those
-        default=_("Вопрос")
+        default=_("Problem")
     )
     attempts = Integer(
         help=_("Number of attempts taken by the student on this problem"),
@@ -1028,7 +1028,7 @@ class ProblemBlock(
         received by the server.
         """
         _ = self.runtime.service(self, "i18n").gettext
-        return _('Отправка')
+        return _('Submitting')
 
     def should_enable_submit_button(self):
         """
@@ -1393,8 +1393,8 @@ class ProblemBlock(
             elif answer_notification_type == 'correct':
                 if progress is not None:
                     answer_notification_message = ngettext(
-                        "Правильно ({progress})",
-                        "Правильно ({progress})",
+                        "Correct ({progress})",
+                        "Correct ({progress})",
                         progress.frac()[1]
                     ).format(progress=str(progress))
                 else:
@@ -1402,8 +1402,8 @@ class ProblemBlock(
             elif answer_notification_type == 'partially-correct':
                 if progress is not None:
                     answer_notification_message = ngettext(
-                        "Почти правильно ({progress})",
-                        "Почти правильно ({progress})",
+                        "Nearly correct ({progress})",
+                        "Nearly correct ({progress})",
                         progress.frac()[1]
                     ).format(progress=str(progress))
                 else:

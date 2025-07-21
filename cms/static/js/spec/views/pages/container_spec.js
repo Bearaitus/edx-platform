@@ -703,7 +703,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         {
                                             category: 'html',
                                             boilerplate_name: null,
-                                            display_name: 'Текст'
+                                            display_name: 'Text'
                                         }, {
                                             category: 'html',
                                             boilerplate_name: 'announcement.yaml',
@@ -745,7 +745,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         {
                                             category: 'html',
                                             boilerplate_name: null,
-                                            display_name: 'Текст'
+                                            display_name: 'Text'
                                         }, {
                                             category: 'html',
                                             boilerplate_name: 'announcement.yaml',
@@ -784,7 +784,7 @@ function parameterized_suite(label, globalPageOptions) {
                                         {
                                             category: 'html',
                                             boilerplate_name: null,
-                                            display_name: 'Текст',
+                                            display_name: 'Text',
                                             support_level: 'fs'
                                         }, {
                                             category: 'html',

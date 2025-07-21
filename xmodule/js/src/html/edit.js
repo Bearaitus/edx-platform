@@ -317,7 +317,7 @@
           /*
           Translators: this is a message from the raw HTML editor displayed in the browser when a user needs to edit HTML
            */
-          "Cancel": gettext("Отменить"),
+          "Cancel": gettext("Cancel"),
 
           /*
           Translators: this is a message from the raw HTML editor displayed in the browser when a user needs to edit HTML

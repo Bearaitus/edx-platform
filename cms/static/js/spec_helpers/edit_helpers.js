@@ -60,7 +60,7 @@ mockComponentTemplates = new ComponentTemplates([
             {
                 category: 'html',
                 boilerplate_name: null,
-                display_name: 'Текст'
+                display_name: 'Text'
             }, {
                 category: 'html',
                 boilerplate_name: 'announcement.yaml',

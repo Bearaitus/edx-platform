@@ -1,34 +1,31 @@
 <%
-var title = gettext("Не опубликовано");
+var title = gettext("Not Published");
 if (visibilityState === 'staff_only') {
-    title = gettext("Доступно только для сотрудников");
+    title = gettext("Staff Only");
 } else if (visibilityState === 'live') {
-    title = gettext("Опубликовано");
+    title = gettext("Published");
 } else if (published && !hasChanges) {
-    title = gettext("Опубликовано (еще не выпущено)");
+    title = gettext("Published (not yet released)");
 } else if (published && hasChanges) {
-    title = gettext("Изменения не опубликованы");
+    title = gettext("Changes not published");
 }
-
-var releaseLabel = gettext("Дата выпуска:");
+var releaseLabel = gettext("Release Date:");
 if (visibilityState === 'live') {
-    releaseLabel = gettext("Дата выпуска:");
+    releaseLabel = gettext("Release Date:");
 } else if (visibilityState === 'ready') {
-    releaseLabel = gettext("Запланировано:");
+    releaseLabel = gettext("Scheduled:");
 }
-
 var visibleToStaffOnly = visibilityState === 'staff_only';
 %>
 <div class="bit-publishing <%- visibilityClass %> <% if (releaseDate) { %>is-scheduled<% } %>">
-    <h3 class="bar-mod-title pub-status"><span class="sr"><%- gettext("Статус публикации") %></span>
+    <h3 class="bar-mod-title pub-status"><span class="sr"><%- gettext("Publishing Status") %></span>
         <%- title %>
     </h3>
-
     <div class="wrapper-pub-actions bar-mod-actions">
         <ul class="action-list">
             <li class="action-item">
                 <a class="action-publish action-primary <% if (published && !hasChanges) { %>is-disabled<% } %>"
-                   href="" aria-disabled="<% if (published && !hasChanges) { %>true<% } else { %>false<% } %>" ><%- gettext("Опубликовать") %>
+                   href="" aria-disabled="<% if (published && !hasChanges) { %>true<% } else { %>false<% } %>" ><%- gettext("Publish") %>
                 </a>
             </li>
         </ul>

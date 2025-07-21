@@ -1,5 +1,5 @@
 <div class="new-component">
-    <h5><%- gettext("Добавить новый блок") %></h5>
+    <h5><%- gettext("Add new block") %></h5>
     <ul class="new-component-type">
     </ul>
 </div>

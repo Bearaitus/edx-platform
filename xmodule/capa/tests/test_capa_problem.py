@@ -728,7 +728,7 @@ class CAPAProblemReportHelpersTest(unittest.TestCase):
                 </optionresponse>
                 <solution>
                     <div class="detailed-solution">
-                        <p>Решение</p>
+                        <p>Explanation</p>
                         <p>Blue is the answer.</p>
                     </div>
                 </solution>

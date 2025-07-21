@@ -2919,7 +2919,7 @@ class ProblemBlockXMLTest(unittest.TestCase):  # lint-amnesty, pylint: disable=m
 
             <solution>
             <div class="detailed-solution">
-            <p>Решение</p>
+            <p>Explanation</p>
 
             <p>Solution for CAPA problem</p>
 
@@ -2946,7 +2946,7 @@ class ProblemBlockXMLTest(unittest.TestCase):  # lint-amnesty, pylint: disable=m
 
              <solution>
             <div class="detailed-solution">
-            <p>Решение</p>
+            <p>Explanation</p>
 
             <p> India became an independent nation on August 15, 1947.</p>
 
@@ -2978,7 +2978,7 @@ class ProblemBlockXMLTest(unittest.TestCase):  # lint-amnesty, pylint: disable=m
 
             <solution>
             <div class="detailed-solution">
-            <p>Решение</p>
+            <p>Explanation</p>
 
             <p>According to September 2014 estimates:</p>
             <p>The population of Indonesia is approximately 250 million.</p>
@@ -3021,7 +3021,7 @@ class ProblemBlockXMLTest(unittest.TestCase):  # lint-amnesty, pylint: disable=m
 
             <solution>
             <div class="detailed-solution">
-            <p>Решение</p>
+            <p>Explanation</p>
 
             <p>The sun is 93,000,000, or 9.3*10^7, miles away from Earth.</p>
             <p>-100 is the square of 10 times the imaginary number, i.</p>
@@ -3054,7 +3054,7 @@ class ProblemBlockXMLTest(unittest.TestCase):  # lint-amnesty, pylint: disable=m
 
             <solution>
             <div class="detailed-solution">
-            <p>Решение</p>
+            <p>Explanation</p>
 
             <p>Nanjing Higher Normal Institute first admitted female students in 1920.</p>
 
@@ -3203,7 +3203,7 @@ class ProblemBlockXMLTest(unittest.TestCase):  # lint-amnesty, pylint: disable=m
             </numericalresponse>
             <solution>
             <div class="detailed-solution">
-            <p>Решение</p>
+            <p>Explanation</p>
 
             <p>The mean is calculated by summing the set of numbers and dividing by n. In this case:
             (1 + 5 + 6 + 3 + 5) / 5 = 20 / 5 = 4.</p>
@@ -3949,7 +3949,7 @@ class ProblemCheckTrackingTest(unittest.TestCase):
 
                 <solution>
                 <div class="detailed-solution">
-                <p>Решение</p>
+                <p>Explanation</p>
                 <a href="/jump_to_id/c0f8d54964bc44a4a1deb8ecce561ecd">here's the same link to the hint page.</a>
                 </div>
                 </solution>

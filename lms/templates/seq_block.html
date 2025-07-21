@@ -3,7 +3,6 @@
   from django.utils.translation import pgettext, gettext as _
   from django.conf import settings
 %>
-
 <div id="sequence_${element_id}" class="sequence" data-id="${item_id}"
      data-position="${position}"
      data-next-url="${next_url}" data-prev-url="${prev_url}"
@@ -11,7 +10,6 @@
      data-show-completion="${'true' if show_completion else 'false'}"
 >
   % if not exclude_units:
-
   % if banner_text:
     <div class="pattern-library-shim alert alert-information subsection-header" role="note" tabindex="-1">
       <span class="pattern-library-shim icon alert-icon fa fa-info-circle" aria-hidden="true"></span>
@@ -28,12 +26,12 @@
   <div class="sequence-nav">
     <button class="sequence-nav-button button-previous">
       <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
-      ## Translators: A button for showing the Назад Unit
-      <span class="sequence-nav-button-label">${pgettext('unit', 'Назад')}</span>
+      ## Translators: A button for showing the Previous Unit
+      <span class="sequence-nav-button-label">${pgettext('unit', 'Back')}</span>
     </button>
     <button class="sequence-nav-button button-next">
-      ## Translators: A button for showing the Вперед Unit
-      <span class="sequence-nav-button-label">${pgettext('unit', 'Вперед')}</span>
+      ## Translators: A button for showing the Next Unit
+      <span class="sequence-nav-button-label">${pgettext('unit', 'Forward')}</span>
       <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
     </button>
     <nav class="sequence-list-wrapper" aria-label="${_('Sequence')}">
@@ -86,15 +84,15 @@
         % endif
         % if exclude_units:
         <li role="presentation" class="custom-dropdown">
-          <button id="new-unit-button" class="dropdown-main-button" data-parent="${item_id}" data-category="vertical" data-default-name="Страница">
+          <button id="new-unit-button" class="dropdown-main-button" data-parent="${item_id}" data-category="vertical" data-default-name="Page">
             <span class="icon fa fa-plus" aria-hidden="true"></span>
-            ${_("Новая страница")}
+            ${_("New Page")}
           </button>
           <button class="dropdown-toggle-button" aria-haspopup="true" aria-expanded="false" style="display: none;">
             <span class="icon fa fa-caret-down" aria-hidden="true"></span>
           </button>
           <ul class="dropdown-options" style="display: none;">
-            <li><a href="#" class="seq_paste_unit" data-parent="${item_id}" data-category="vertical" data-default-name="Страница">${_("Paste as new unit")}</a></li>
+            <li><a href="#" class="seq_paste_unit" data-parent="${item_id}" data-category="vertical" data-default-name="Page">${_("Paste as new unit")}</a></li>
           </ul>
         </li>
         % endif
@@ -117,7 +115,6 @@
       <iframe id="progress-frame" style="border: none; width: 100%; height: 70px;" src="${chapter_completion_aggregator_url}"></iframe>
     </div>
   % endif
-
   % for idx, item in enumerate(items):
   <div id="seq_contents_${idx}"
     aria-labelledby="tab_${idx}"
@@ -131,17 +128,16 @@
 % else:
   <div id="seq_content" role="tabpanel"></div>
 % endif
-
 % if not exclude_units:
   <nav class="sequence-bottom" aria-label="${_('Section')}">
     <button class="sequence-nav-button button-previous">
       <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
-      ## Translators: A button for showing the Назад Unit
-      <span>${pgettext('unit', 'Назад')}</span>
+      ## Translators: A button for showing the Previous Unit
+      <span>${pgettext('unit', 'Back')}</span>
     </button>
     <button class="sequence-nav-button button-next">
-      ## Translators: A button for showing the Вперед Unit
-      <span>${pgettext('unit', 'Вперед')}</span>
+      ## Translators: A button for showing the Next Unit
+      <span>${pgettext('unit', 'Forward')}</span>
       <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
     </button>
   </nav>

@@ -56,7 +56,7 @@ class HtmlBlockMixin(  # lint-amnesty, pylint: disable=abstract-method
         scope=Scope.settings,
         # it'd be nice to have a useful default but it screws up other things; so,
         # use display_name_with_default for those
-        default=_("Текст")
+        default=_("Text")
     )
     data = String(help=_("Html contents to display for this block"), default="", scope=Scope.content)
     source_code = String(

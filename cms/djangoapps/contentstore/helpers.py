@@ -179,11 +179,11 @@ def xblock_type_display_name(xblock, default_display_name=None):
     else:
         category = xblock
     if category == 'chapter':
-        return _('Модуль')
+        return _('Module')
     elif category == 'sequential':
-        return _('Часть')
+        return _('Subsection')
     elif category == 'vertical':
-        return _('Страница')
+        return _('Page')
     elif category == 'problem':
         # The problem XBlock's display_name.default is not helpful ("Blank Problem") but changing it could have
         # too many ripple effects in other places, so we have a special case for capa problems here.
