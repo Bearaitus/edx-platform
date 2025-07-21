@@ -1884,7 +1884,7 @@ def _get_course_index_context(request, course_key, course_block):
     course_release_date = (
         get_default_time_display(course_block.start)
         if course_block.start != DEFAULT_START_DATE
-        else _("Перейти")
+        else _("Go to the page")
     )
 
     settings_url = reverse_course_url('settings_handler', course_key)

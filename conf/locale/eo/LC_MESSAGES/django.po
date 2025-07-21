@@ -15127,7 +15127,7 @@ msgid "Invalid prerequisite course key"
 msgstr "Ìnvälïd préréqüïsïté çöürsé kéý Ⱡ'σяєм ιρѕυм ∂σłσя ѕιт αмєт, ¢σηѕє¢т#"
 
 #: cms/djangoapps/contentstore/utils.py
-msgid "Перейти"
+msgid "Go to the page"
 msgstr "Sét Däté Ⱡ'σяєм ιρѕυм ∂#"
 
 #. #-#-#-#-#  django-studio.po (0.1a)  #-#-#-#-#

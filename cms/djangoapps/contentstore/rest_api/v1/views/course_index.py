@@ -53,7 +53,7 @@ class CourseIndexView(DeveloperErrorViewMixin, APIView):
 
         ```json
         {
-            "course_release_date": "Перейти",
+            "course_release_date": "Go to the page",
             "course_structure": {},
             "deprecated_blocks_info": {
                 "deprecated_enabled_block_types": [],
