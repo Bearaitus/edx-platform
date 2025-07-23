@@ -24,15 +24,15 @@ DEFAULT_GRADING_POLICY = {
                 {
                     "drop_count": 0,
                     "min_count": 1,
-                    "short_label": "Theory",
-                    "type": "Theoretical Material",
+                    "short_label": "EA",
+                    "type": "Educational article",
                     "weight": 0.1
                 },
                 {
                     "drop_count": 0,
                     "min_count": 1,
-                    "short_label": "Practice",
-                    "type": "Practical Cases",
+                    "short_label": "EC",
+                    "type": "Educational cases",
                     "weight": 0.1
                 }
             ],
