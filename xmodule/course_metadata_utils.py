@@ -26,14 +26,14 @@ DEFAULT_GRADING_POLICY = {
                     "min_count": 1,
                     "short_label": "Теория",
                     "type": "Теоретический материал",
-                    "weight": 0.1
+                    "weight": 0.25
                 },
                 {
                     "drop_count": 0,
                     "min_count": 1,
                     "short_label": "Практика",
                     "type": "Практические кейсы",
-                    "weight": 0.1
+                    "weight": 0.75
                 }
             ],
             "GRADE_CUTOFFS": {
