@@ -26,14 +26,14 @@ DEFAULT_GRADING_POLICY = {
                     "min_count": 1,
                     "short_label": "EA",
                     "type": "Educational article",
-                    "weight": 0.1
+                    "weight": 0.25
                 },
                 {
                     "drop_count": 0,
                     "min_count": 1,
                     "short_label": "EC",
                     "type": "Educational cases",
-                    "weight": 0.1
+                    "weight": 0.75
                 }
             ],
             "GRADE_CUTOFFS": {
